@@ -2,6 +2,8 @@
 
 **ภาษาไทย** · [English](README.md)
 
+![nzs-skills](docs/assets/banner.png)
+
 วิธีทำงานจริง เขียนออกมาเป็น skills ที่รันได้สำหรับ [Claude Code](https://claude.com/claude-code)
 
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
@@ -153,11 +155,37 @@ node scripts/validate.mjs --verbose
 ทุกข้อมีอยู่เพราะข้อบกพร่องนั้นเกิดที่นี่มาก่อน และทุกข้อผ่านการทดสอบด้วยการแกล้งทำให้พัง:
 ทำให้เสีย เห็นมันแดง คืนค่ากลับ เห็นมันเขียว
 
+## มันทำงานคนเดียวไม่ได้ — อ่าน [คู่มือระบบนิเวศ](docs/ECOSYSTEM.th.md)
+
+skill เป็นตัวตัดสินว่า **อะไรนับเป็นหลักฐาน** ส่วน tool คือ **วิธีที่คุณไปเอาหลักฐานนั้นมา**
+`method-verify` บอกว่าคำอ้างเรื่องการแสดงผลต้องพิสูจน์ที่ DOM — Playwright คือตัวที่เปิด
+เบราว์เซอร์ `nzs-learn` บอกว่าบทเรียนต้องอยู่รอดข้าม session — engram คือตัวที่เก็บ
+
+**[docs/ECOSYSTEM.th.md](docs/ECOSYSTEM.th.md)** คืออีกครึ่งของรีโปนี้: เครื่องมือทุกตัวที่ใช้
+ร่วมกัน — Playwright, CodeGraph, engram, headroom, Context7, rtk, caveman, codex,
+bug-hunter, scrutinize, debug-mantra, impeccable, 9router — แต่ละตัวคืออะไร ได้อะไร
+ใช้ยังไง **พังตรงไหน** พร้อมท่าที่ควรจำเจ็ดท่า use case ตั้งแต่ต้นจนจบ และกรณีศึกษาจริง
+ที่เป็นที่มาของกฎทุกข้อในรีโปนี้
+
 ## เครดิต
 
-การแบ่งเป็นชั้นที่ผู้ใช้เรียก กับชั้นที่โมเดลเรียก และวินัยเรื่องไฟล์ภาษากลาง เอามาจาก
-[mattpocock/skills](https://github.com/mattpocock/skills) รับมาเป็นกฎพร้อมเหตุผล ไม่ใช่
-ก๊อปมาทั้งดุ้น — ซึ่งเป็นสิ่งที่ `method-extract` บังคับกับทุกอย่างที่หยิบยืมมา
+วิธีนี้ยืนอยู่บนงานของคนอื่น รายการเต็มพร้อมบอกว่าแต่ละตัวใช้ทำอะไร อยู่ใน
+[คู่มือระบบนิเวศ](docs/ECOSYSTEM.th.md#เครดิต) ตัวที่สำคัญที่สุด:
+
+- [mattpocock/skills](https://github.com/mattpocock/skills) — การแบ่งชั้นผู้ใช้เรียก /
+  โมเดลเรียก และไฟล์ภาษากลาง ซึ่งเป็นโครงสร้างของรีโปนี้ทั้งรีโป `nzs-grill` ดัดแปลงมาจาก
+  `grill-me` ของเขา รับมาเป็นกฎพร้อมเหตุผล ไม่ใช่ก๊อปมาทั้งดุ้น — ซึ่งเป็นสิ่งที่
+  `method-extract` บังคับกับทุกอย่างที่หยิบยืมมา
+- [obra/superpowers](https://github.com/obra/superpowers) — วินัยว่ากระบวนการมาก่อนการลงมือ
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman),
+  [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc),
+  [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
+  — ปลั๊กอินที่วิธีนี้ทำงานเคียงข้างทุกวัน
+- [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
+  — คลัง security ที่แถว `ความปลอดภัย` ยืมแบบแผนมา
+- [decolua/9router](https://github.com/decolua/9router) — เกตเวย์ที่ใช้ทำภาพของรีโปนี้
+- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**,
+  **Context7** และ Claude Code เอง ซึ่งเป็นพื้นที่ทั้งหมดนี้รันอยู่
 
 ## สัญญาอนุญาต
 

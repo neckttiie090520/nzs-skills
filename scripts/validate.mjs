@@ -170,11 +170,29 @@ ran("README coverage", skills.size * readmes.length);
 // A number in prose next to the thing that computes it goes stale silently.
 // Write the comparison, never the count.
 
-const PROSE = ["README.md", "README.th.md", "CONTEXT.md", "CONTRIBUTING.md", "SECURITY.md", ...[...skills.values()].map((s) => s.path)];
+const PROSE = [
+  "README.md",
+  "README.th.md",
+  "CONTEXT.md",
+  "CONTRIBUTING.md",
+  "SECURITY.md",
+  "docs/ECOSYSTEM.md",
+  "docs/ECOSYSTEM.th.md",
+  ...[...skills.values()].map((s) => s.path),
+];
 const COUNT_IN_PROSE = /\b(\d{2,})\s+skills\b|\bthe\s+(two|three|four|five|six|seven|eight|nine|ten)\s+(entry points|skills|commands)\b/gi;
+/**
+ * Code spans and fenced blocks are QUOTING, not asserting. The case study that
+ * documents this very defect has to be able to write `29 skills` as the example
+ * of what went wrong — flagging it there was this check's own false positive,
+ * found the first time the docs described the bug that created the check.
+ */
+const proseOnly = (text) =>
+  text.replace(/```[\s\S]*?```/g, " ").replace(/`[^`\n]*`/g, " ");
+
 for (const file of PROSE) {
   if (!existsSync(file)) continue;
-  for (const m of readFileSync(file, "utf8").matchAll(COUNT_IN_PROSE))
+  for (const m of proseOnly(readFileSync(file, "utf8")).matchAll(COUNT_IN_PROSE))
     fail("no hardcoded count in prose", `${file} — "${m[0].trim()}" will be wrong the day the set changes; state the comparison instead`);
 }
 

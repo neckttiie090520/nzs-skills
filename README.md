@@ -2,6 +2,8 @@
 
 **English** · [ภาษาไทย](README.th.md)
 
+![nzs-skills](docs/assets/banner.png)
+
 A working method, as executable skills for [Claude Code](https://claude.com/claude-code).
 
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
@@ -154,12 +156,43 @@ and that **no count is written into prose** — each because that exact defect
 shipped here first. Every check has been mutation-tested: broken deliberately,
 seen red, restored, seen green.
 
+## It does not work alone — read [the ecosystem guide](docs/ECOSYSTEM.md)
+
+A skill decides **what counts as evidence**. A tool is **how you go and get it**.
+`method-verify` says a rendered claim is settled in the DOM; Playwright is what
+opens the browser. `nzs-learn` says a lesson must outlive the session; engram is
+what stores it.
+
+**[docs/ECOSYSTEM.md](docs/ECOSYSTEM.md)** ([ภาษาไทย](docs/ECOSYSTEM.th.md)) is
+the other half of this repo: every tool the method composes with — Playwright,
+CodeGraph, engram, headroom, Context7, rtk, caveman, codex, bug-hunter,
+scrutinize, debug-mantra, impeccable, 9router — what each one is, what it buys,
+how to drive it, **where it fails**, seven named stances worth memorising, use
+cases end to end, and the case studies that produced every rule here.
+
 ## Credit
 
-The user-invoked / model-invoked split, and the discipline of a shared-language
-file, are taken from [mattpocock/skills](https://github.com/mattpocock/skills).
-Adopted here as rules with reasons rather than as copies — which is what
-`method-extract` requires of any borrowed pattern.
+This method stands on other people's work. The full list, with what each one is
+used *for*, is in [the ecosystem guide](docs/ECOSYSTEM.md#credits). The load-
+bearing ones:
+
+- [mattpocock/skills](https://github.com/mattpocock/skills) — the user-invoked /
+  model-invoked split and the shared-language file, which is the structure of
+  this whole repo. `nzs-grill` is adapted from his `grill-me`. Adopted as rules
+  with reasons rather than as copies, which is what `method-extract` requires of
+  any borrowed pattern.
+- [obra/superpowers](https://github.com/obra/superpowers) — process-before-
+  implementation discipline.
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman),
+  [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc),
+  [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
+  — the plugins this method runs beside daily.
+- [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
+  — the security library whose conventions the `secure` row borrows.
+- [decolua/9router](https://github.com/decolua/9router) — the gateway that
+  generated this repo's artwork.
+- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**,
+  **Context7**, and Claude Code itself, which is the substrate all of it runs on.
 
 ## Licence
 
