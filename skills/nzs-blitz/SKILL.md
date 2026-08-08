@@ -1,5 +1,5 @@
 ---
-name: nzs-crucible
+name: nzs-blitz
 description: >-
   The whole adversarial sweep, one command. Runs scrutinize (outsider, trace,
   is-this-necessary), bug-hunter (Recon → Hunter → Skeptic → Referee, with
@@ -10,7 +10,7 @@ description: >-
   this / ลุยเลย / hit it with everything / full pass / everything you've got.
 ---
 
-# nzs-crucible
+# nzs-blitz
 
 Four tools, one target, one report. Each one structurally cannot see what the
 others catch — that is the whole reason to run all four rather than picking

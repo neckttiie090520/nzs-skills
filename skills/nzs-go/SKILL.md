@@ -27,7 +27,7 @@ sequence.
 | a leaked key, "rotate", .env, a repo about to go public | contain | `method-vault` |
 | vague want, "something like…", no clear scope | elicit | `nzs-huddle` (Resolve) |
 | a decision that needs an argument, not a checklist | challenge | `nzs-huddle` (Judge) |
-| "everything you've got", "sweep this", "hit it with everything" | sweep | `nzs-crucible` |
+| "everything you've got", "sweep this", "hit it with everything" | sweep | `nzs-blitz` |
 
 If the request is a reference plus a build ("make our page like theirs"),
 acquisition runs FIRST and its output is what planning may cite. Never plan

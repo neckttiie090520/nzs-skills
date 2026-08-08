@@ -291,7 +291,7 @@ when you feel finished.
 The third step is the one people skip and the one that compounds: a bug class
 that appeared twice earns a guard, permanently.
 
-**4b. The sweep** — `nzs-crucible`, when you want everything at once
+**4b. The sweep** — `nzs-blitz`, when you want everything at once
 Formalises this stance plus two more into one command: `scrutinize` first
 (is this diff even the right shape), then `bug-hunter`, then codex as a
 genuinely independent pass, with `debug-mantra` gating any fix before it is
@@ -437,9 +437,11 @@ merely admired.
   — Vercel and Figma plugins.
 
 **Review and craft skills**
-`bug-hunter` (adversarial Recon → Hunter → Skeptic → Referee), `scrutinize`
-(outsider, end-to-end), `debug-mantra` (the four-step debugging discipline that
-`method-whodunit` encodes), `impeccable` (the design craft floor),
+`bug-hunter` (adversarial Recon → Hunter → Skeptic → Referee),
+[thananon/9arm-skills](https://github.com/thananon/9arm-skills) — `scrutinize`
+(outsider, end-to-end) and `debug-mantra` (the four-step debugging discipline
+that `method-whodunit` encodes) both come from here, and both are named
+directly inside `nzs-blitz` — `impeccable` (the design craft floor),
 `karpathy-guidelines`.
 
 **Infrastructure**

@@ -100,7 +100,7 @@ currency.**
 | **`/nzs-setup`** | a fresh machine. Installs the environment and *proves* each piece works |
 | **`/nzs-scrapbook`** | something worked, or broke. Records the *shape* of it into engram |
 | **`/nzs-handoff`** | out of context, or stopping for the day |
-| **`/nzs-crucible`** | throw everything at a change at once — scrutinize, bug-hunter, codex, then debug-mantra on any fix, one merged report |
+| **`/nzs-blitz`** | throw everything at a change at once — scrutinize, bug-hunter, codex, then debug-mantra on any fix, one merged report |
 
 Everything else the model reaches for on its own.
 
@@ -133,7 +133,7 @@ Everything else the model reaches for on its own.
 | **`nzs-setup`** | installs the whole environment and *proves* each piece works |
 | **`nzs-handoff`** | compacts a session into something the next agent can resume from |
 | **`nzs-scrapbook`** | records wins, mistake *shapes*, and your taste — into engram |
-| **`nzs-crucible`** | runs scrutinize, bug-hunter and codex against the same diff, routes fixes through debug-mantra first, ends in one report |
+| **`nzs-blitz`** | runs scrutinize, bug-hunter and codex against the same diff, routes fixes through debug-mantra first, ends in one report |
 
 **Disciplines.** The model reaches for these. One thing each, done properly.
 
@@ -226,6 +226,9 @@ This method stands on other people's work. Full list, with what each is used
   this whole repo. `nzs-huddle`'s Resolve job is adapted from his `grill-me`, though
   it has since diverged: ours never blocks on a human, resolving branches by
   spawning subagents instead.
+- [thananon/9arm-skills](https://github.com/thananon/9arm-skills) — `scrutinize`
+  and `debug-mantra`, load-bearing throughout this method and both named
+  directly inside `nzs-blitz`.
 - [obra/superpowers](https://github.com/obra/superpowers) — process-before-
   implementation discipline.
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — output
