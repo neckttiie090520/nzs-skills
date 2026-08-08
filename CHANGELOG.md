@@ -53,5 +53,5 @@ mutation-tested.
 
 ## 1.0.0 — 2026-08-07
 
-First public release. The entry layer, the discipline layer, and three ADRs —
-extracted from 279 commits and 106 instructions of one real project.
+First public release. The entry layer, the discipline layer, and three ADRs,
+extracted from one real project's working history.

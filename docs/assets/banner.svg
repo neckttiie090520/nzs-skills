@@ -60,5 +60,5 @@
     <path d="M4 108h112M4 100v16M116 100v16" stroke="#1c1a17" stroke-width="2.4" fill="none" opacity=".8"/>
   </g>
 
-  <text class="t meta" x="96" y="592">executable skills for Claude Code   ·   extracted from 279 commits of real work</text>
+  <text class="t meta" x="96" y="592">executable skills for Claude Code</text>
 </svg>
