@@ -23,6 +23,8 @@ sequence.
 | one broken thing, "why is X doing Y" | diagnose | `method-debug` |
 | "ship", "deploy", "push" | ship | `method-ship` |
 | "how do users", "is this real" | discover | `method-discovery` |
+| credentials, money, other people's data, uploads, external input | build, but model it first | `method-threat` → `method-plan` |
+| a leaked key, "rotate", .env, a repo about to go public | contain | `method-secrets` |
 | vague want, "something like…", no clear scope | elicit | `nzs-grill` |
 | a decision that needs an argument, not a checklist | challenge | `nzs-panel` |
 

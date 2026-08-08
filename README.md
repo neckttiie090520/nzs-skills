@@ -57,6 +57,7 @@ currency.**
 | decide | `method-decide` · `method-economics` · `method-register` · `method-postmortem` · `method-pm` · `method-discovery` · `method-ideate` |
 | build | `method-plan` · `method-se` · `method-guard` · `method-robust` |
 | verify | `method-review` · `method-debug` · `method-verify` · `method-visual` |
+| secure | `method-security` · `method-threat` · `method-secrets` · `method-appsec` · `method-aisec` |
 | ship | `method-ship` · `method` (orchestrator) |
 
 A user-invoked skill may call a discipline. It never calls another user-invoked
@@ -114,8 +115,8 @@ point has already broken its first rule.
 ## Layout
 
 ```
-skills/           29 skills, one directory each
-commands/         slash commands for the four entry points
+skills/           one directory each, name matching its frontmatter
+commands/         one slash command per entry point
 .claude-plugin/   plugin manifest
 docs/adr/         the decisions, with what they cost
 CONTEXT.md        the shared language every skill assumes
