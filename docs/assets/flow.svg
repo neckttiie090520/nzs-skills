@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="The nzs-skills flow: you type a request, nzs-start plans a stack of skills, the skills use tools to gather real evidence, and nothing ships until the evidence exists.">
+  <title>How nzs-skills works</title>
+
+  <!--
+    Authored, not generated. A flow needs correct labels, and image models
+    garble text every time. SVG is also crisp at any size and stays editable.
+    Palette and material match the photographic assets: cream paper, vermilion,
+    graphite.
+  -->
+
+  <defs>
+    <style>
+      .paper  { fill: #f2ece1; }
+      .ink    { fill: #1c1a17; }
+      .red    { fill: #d63c1e; }
+      .rule   { stroke: #1c1a17; stroke-width: 1.6; fill: none; }
+      .hair   { stroke: #1c1a17; stroke-width: 1; opacity: .28; fill: none; }
+      .redln  { stroke: #d63c1e; stroke-width: 3; fill: none; }
+      .box    { fill: none; stroke: #1c1a17; stroke-width: 2.2; }
+      .t      { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; fill: #1c1a17; }
+      .lbl    { font-size: 26px; font-weight: 600; letter-spacing: .01em; }
+      .sub    { font-size: 18px; opacity: .62; }
+      .step   { font-size: 15px; fill: #d63c1e; letter-spacing: .14em; }
+      .quote  { font-size: 27px; }
+      @media (prefers-color-scheme: dark) {
+        .paper { fill: #14120f; }
+        .ink   { fill: #ece5d8; }
+        .t     { fill: #ece5d8; }
+        .rule, .box { stroke: #ece5d8; }
+        .hair  { stroke: #ece5d8; opacity: .22; }
+      }
+    </style>
+  </defs>
+
+  <rect class="paper" width="1600" height="800"/>
+
+  <!-- registration marks, as on the printed plates -->
+  <g class="hair">
+    <path d="M40 40h26M53 27v26"/><path d="M1560 40h-26M1547 27v26"/>
+    <path d="M40 760h26M53 747v26"/><path d="M1560 760h-26M1547 747v26"/>
+  </g>
+
+  <!-- ─────────────────────────  1  you ask  ───────────────────────── -->
+  <text class="t step" x="96" y="150">01</text>
+  <text class="t lbl"  x="96" y="196">you</text>
+  <text class="t sub"  x="96" y="228">say what you want</text>
+  <rect class="box" x="90" y="256" width="286" height="92" rx="6"/>
+  <text class="t sub" x="112" y="300">/nzs-start add a</text>
+  <text class="t sub" x="112" y="326">login page</text>
+
+  <path class="redln" d="M376 302h96" marker-end="url(#a)"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0l10 5-10 5z" fill="#d63c1e"/>
+    </marker>
+  </defs>
+
+  <!-- ─────────────────────────  2  the router plans  ───────────────── -->
+  <text class="t step" x="500" y="150">02</text>
+  <text class="t lbl"  x="500" y="196">a plan, not a menu</text>
+  <text class="t sub"  x="500" y="228">which skills, in what order</text>
+
+  <g>
+    <rect class="box" x="494" y="256" width="270" height="46" rx="6"/>
+    <text class="t sub" x="514" y="286">method-plan</text>
+    <rect class="box" x="494" y="314" width="270" height="46" rx="6"/>
+    <text class="t sub" x="514" y="344">method-code</text>
+    <rect class="box" x="494" y="372" width="270" height="46" rx="6"/>
+    <text class="t sub" x="514" y="402">method-security</text>
+    <rect class="box" x="494" y="430" width="270" height="46" rx="6"/>
+    <text class="t sub" x="514" y="460">method-verify</text>
+  </g>
+
+  <path class="redln" d="M764 366h96" marker-end="url(#a)"/>
+
+  <!-- ─────────────────────────  3  tools fetch evidence  ───────────── -->
+  <text class="t step" x="888" y="150">03</text>
+  <text class="t lbl"  x="888" y="196">tools go and look</text>
+  <text class="t sub"  x="888" y="228">the browser, the database,</text>
+  <text class="t sub"  x="888" y="252">the build, the ledger</text>
+
+  <g>
+    <rect class="box" x="882" y="286" width="132" height="132" rx="6"/>
+    <text class="t sub" x="902" y="330">the</text>
+    <text class="t sub" x="902" y="356">page</text>
+    <circle class="red" cx="978" cy="394" r="7"/>
+
+    <rect class="box" x="1030" y="286" width="132" height="132" rx="6"/>
+    <text class="t sub" x="1050" y="330">the</text>
+    <text class="t sub" x="1050" y="356">rows</text>
+    <circle class="red" cx="1126" cy="394" r="7"/>
+
+    <rect class="box" x="882" y="434" width="132" height="132" rx="6"/>
+    <text class="t sub" x="902" y="478">the</text>
+    <text class="t sub" x="902" y="504">build</text>
+    <circle class="red" cx="978" cy="542" r="7"/>
+
+    <rect class="box" x="1030" y="434" width="132" height="132" rx="6"/>
+    <text class="t sub" x="1050" y="478">the</text>
+    <text class="t sub" x="1050" y="504">cost</text>
+    <circle class="red" cx="1126" cy="542" r="7"/>
+  </g>
+
+  <path class="redln" d="M1162 426h108" marker-end="url(#a)"/>
+
+  <!-- ─────────────────────────  4  the gate  ───────────────────────── -->
+  <text class="t step" x="1298" y="150">04</text>
+  <text class="t lbl"  x="1298" y="196">evidence,</text>
+  <text class="t lbl"  x="1298" y="228">or it does not ship</text>
+
+  <!-- the tick, measured -->
+  <g transform="translate(1298 286)">
+    <rect class="box" x="0" y="0" width="212" height="212" rx="6"/>
+    <g class="hair">
+      <path d="M0 53h212M0 106h212M0 159h212M53 0v212M106 0v212M159 0v212"/>
+    </g>
+    <path d="M46 118 l38 40 l86 -96" stroke="#d63c1e" stroke-width="17" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- calipers reading it -->
+    <path class="rule" d="M46 190h124M46 182v16M170 182v16"/>
+  </g>
+
+  <!-- the loop back: what fails goes round again -->
+  <path class="redln" d="M1404 522 v92 H500 v-46" stroke-dasharray="9 9" marker-end="url(#a)"/>
+  <text class="t sub" x="900" y="646" text-anchor="middle">no evidence → back to the stack, not "done"</text>
+
+  <!-- the sentence, on the baseline rule -->
+  <path class="redln" d="M96 706h1408"/>
+  <text class="t quote" x="96" y="762">nothing is done until it is checked where “done” is actually true</text>
+</svg>

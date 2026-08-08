@@ -2,24 +2,52 @@
 
 **English** · [ภาษาไทย](README.th.md)
 
-![nzs-skills](docs/assets/banner.svg)
-
-A working method, as executable skills for [Claude Code](https://claude.com/claude-code).
+![nzs-skills — nothing is done until it is checked where done is actually true](docs/assets/banner.svg)
 
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
+[![stars](https://img.shields.io/github/stars/neckttiie090520/nzs-skills?style=flat&color=d63c1e)](https://github.com/neckttiie090520/nzs-skills/stargazers)
+[![last commit](https://img.shields.io/github/last-commit/neckttiie090520/nzs-skills?style=flat)](https://github.com/neckttiie090520/nzs-skills/commits/main)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
+Executable skills that stop your agent reporting work it did not do.
 
 > **New here, or you vibecode rather than write code all day?**
 > Read **[Start here](docs/START-HERE.md)** ([ภาษาไทย](docs/START-HERE.th.md))
 > instead of this page. Fifteen minutes, no jargon, and you will have used it.
 
-Not a prompt collection. These were extracted from **279 commits and 106
-instructions** of one real project, then attacked by adversarial review until
-the reviews stopped finding things that mattered — including the reviews that
-found defects in the skills themselves.
+---
 
-The method in one sentence: **nothing is done until it has been settled in the
-medium where the claim is true.**
+## Before / after
+
+**Without this.** The agent changes a design token and reports:
+
+> Fixed! The focus ring now meets the contrast requirement.
+
+It did not. The token was never the cause.
+
+**With this.** `method-verify` refuses the claim until it is settled in the
+medium where it is true — so the same moment reads:
+
+```
+claim    focus ring meets 3:1 non-text contrast
+medium   computed style, live DOM
+probe    getComputedStyle(el).outlineColor
+actual   lab(45.13 18.36 -71.70)  →  1.97:1
+verdict  NOT FIXED — the token was not the cause; an opacity
+         modifier was. Reopened.
+```
+
+That is the whole product. Everything else is that habit, applied to a specific
+kind of work.
+
+These are not hypotheticals. Every rule here was bought with a real defect:
+
+| what happened in the source project | the rule it became |
+|---|---|
+| A URL field split on the letter `s` — a lost backslash — live in production and **never worked once** | an edit that matches nothing and a probe that matches too much are the same failure |
+| A dead regex made a repair pass fire on **every generation**, billed twice, result discarded | cost is read from the ledger, never from intention |
+| Drafts came back at **13% of target length** under seven commits of interface polish | reviews rotate roles; one posture cannot see outside itself |
+| Three edits **silently matched nothing** and were reported as done | a report is not evidence |
 
 ---
 
@@ -32,14 +60,18 @@ As a plugin, which keeps it updatable:
 /plugin install nzs-skills@nzs-skills
 ```
 
-Or copy the files, if you would rather read them first — and you should:
+Or copy the files, if you would rather read them first — and you should, because
+these are instructions an agent follows on your machine:
 
 ```bash
 git clone https://github.com/neckttiie090520/nzs-skills.git
 cp -r nzs-skills/skills/* ~/.claude/skills/        # global
-# or, per project:
-cp -r nzs-skills/skills/* .claude/skills/
+cp -r nzs-skills/skills/* .claude/skills/          # or per project
 ```
+
+**Then restart Claude Code.** Skills, plugins and MCP servers are read at
+startup; anything installed mid-session sits on disk unloaded. This is the step
+that makes a correct install look broken.
 
 Then, in any project:
 
@@ -51,6 +83,37 @@ The first run writes `.method/config.yml` via `method-onboard`. Everything
 project-specific lives there — commands, mediums, budgets, references, model
 tiers — which is why **no skill in this repo names a framework, a database, or a
 currency.**
+
+---
+
+## What you type
+
+| command | when |
+|---|---|
+| **`/nzs-start`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
+| **`/nzs-grill`** | a vague idea you want pinned down before building. Ends in an artifact, never a summary |
+| **`/nzs-panel`** | you want it argued with — a biased outsider, a hard-to-please CTO, and a senior who corrects both |
+| **`/nzs-goal`** | work too big for one sitting. Writes a `/goal` prompt and a plan file the loop re-reads, built to terminate |
+| **`/nzs-setup`** | a fresh machine. Installs the environment and *proves* each piece works |
+| **`/nzs-learn`** | something worked, or broke. Records the *shape* of it into engram |
+| **`/nzs-handoff`** | out of context, or stopping for the day |
+
+Everything else the model reaches for on its own.
+
+---
+
+## How it works
+
+![the flow: you ask, nzs-start plans a stack, tools gather evidence, nothing ships without it](docs/assets/flow.svg)
+
+1. **You ask.** Plain language, in any language.
+2. **`nzs-start` returns a stack, not a menu.** A router that hands you three
+   options has given the decision back to you.
+3. **The skills send tools to look** — the live DOM for a rendered claim, real
+   rows for a persistence claim, the ledger for cost, a command's exit code for
+   a build.
+4. **No evidence means back to the stack**, not "done". Anything that cannot be
+   settled is reported as *attempted, unverified — and why*.
 
 ---
 
@@ -101,25 +164,6 @@ skill — the rule that keeps triggers unambiguous.
 
 ---
 
-## Why the method exists
-
-Four things that happened in the source project, each of which became a rule:
-
-- A field split URLs on the letter `s` — a lost backslash — and had **never
-  worked once**. Nobody noticed because the error message read like a broken
-  site rather than a broken split.
-- A style guard's regexes were dead in the same way, so a repair pass fired on
-  **every single generation**, billed twice, and threw the result away.
-- Drafts came back at **13% of their target length** while seven commits of
-  interface polish landed on top. Every craft review passed. None could have
-  caught it, because it was not a craft question.
-- Three separate edits **silently matched nothing** and were reported as done.
-
-The last one is why `method-evidence` exists, and why its gate names those exact
-self-deceptions by shape.
-
----
-
 ## The known weakness
 
 The anti-theatre gate is **self-attested**. A model can tick its checkboxes and
@@ -133,18 +177,6 @@ point has already broken its first rule.
 
 ---
 
-## Layout
-
-```
-skills/           one directory each, name matching its frontmatter
-commands/         one slash command per entry point
-scripts/          validate.mjs — the repo's guard on itself
-.claude-plugin/   plugin + marketplace manifests
-.github/          CI, which is that validator and nothing else
-docs/adr/         the decisions, with what they cost
-CONTEXT.md        the shared language every skill assumes
-```
-
 ## The repo holds itself to the method
 
 A set that preaches executable guards and enforces nothing would be a
@@ -156,40 +188,45 @@ node scripts/validate.mjs --verbose
 
 No dependencies. It checks the frontmatter contract, that every cross-reference
 resolves, that every entry point is reachable from the router and has a command,
-that the README covers the set, that no credential-shaped string is committed,
+that both READMEs cover the set, that no credential-shaped string is committed,
 and that **no count is written into prose** — each because that exact defect
 shipped here first. Every check has been mutation-tested: broken deliberately,
-seen red, restored, seen green.
+seen red, restored, seen green. CI runs exactly this and nothing else.
 
-## It does not work alone — read [the ecosystem guide](docs/ECOSYSTEM.md)
+---
+
+## It does not work alone
 
 A skill decides **what counts as evidence**. A tool is **how you go and get it**.
 `method-verify` says a rendered claim is settled in the DOM; Playwright is what
 opens the browser. `nzs-learn` says a lesson must outlive the session; engram is
 what stores it.
 
-**[docs/ECOSYSTEM.md](docs/ECOSYSTEM.md)** ([ภาษาไทย](docs/ECOSYSTEM.th.md)) is
-the other half of this repo: every tool the method composes with — Playwright,
-CodeGraph, engram, headroom, rtk, caveman, codex, bug-hunter,
-scrutinize, debug-mantra, impeccable — what each one is, what it buys,
-how to drive it, **where it fails**, seven named stances worth memorising, use
-cases end to end, and the case studies that produced every rule here.
+**[The ecosystem guide](docs/ECOSYSTEM.md)** ([ภาษาไทย](docs/ECOSYSTEM.th.md))
+covers every tool the method composes with — what each is, what it buys, how to
+drive it, **where it fails** — plus named stances, use cases end to end, and the
+case studies behind every rule.
+
+Only tools a setup step can **install and then prove working** are listed.
+Anything needing a human to open a browser and paste a key back is excluded, on
+the same principle as everything else here: do not claim what you cannot check.
+
+---
 
 ## Credit
 
-This method stands on other people's work. The full list, with what each one is
-used *for*, is in [the ecosystem guide](docs/ECOSYSTEM.md#credits). The load-
-bearing ones:
+This method stands on other people's work. Full list, with what each is used
+*for*, in [the ecosystem guide](docs/ECOSYSTEM.md#credits). The load-bearing ones:
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) — the user-invoked /
   model-invoked split and the shared-language file, which is the structure of
-  this whole repo. `nzs-grill` is adapted from his `grill-me`. Adopted as rules
-  with reasons rather than as copies, which is what `method-extract` requires of
-  any borrowed pattern.
+  this whole repo. `nzs-grill` is adapted from his `grill-me`.
 - [obra/superpowers](https://github.com/obra/superpowers) — process-before-
   implementation discipline.
-- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman),
-  [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc),
+- [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — output
+  compression that keeps every technical fact, and the README shape this page
+  borrows: proof before philosophy.
+- [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) and
   [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
   — the plugins this method runs beside daily.
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
@@ -197,7 +234,11 @@ bearing ones:
 - **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**, and
   Claude Code itself, which is the substrate all of it runs on.
 
-## Licence
+---
+
+**[Start here](docs/START-HERE.md)** · **[Ecosystem](docs/ECOSYSTEM.md)** ·
+**[Changelog](CHANGELOG.md)** · **[Contributing](CONTRIBUTING.md)** ·
+**[Security](SECURITY.md)** · **[Decisions](docs/adr/)** ·
+**[Issues](https://github.com/neckttiie090520/nzs-skills/issues)**
 
 MIT.
-
