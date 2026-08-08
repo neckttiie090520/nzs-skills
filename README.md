@@ -19,26 +19,28 @@ Executable skills that stop your agent reporting work it did not do.
 
 ## Before / after
 
-**Without this.** The agent changes a design token and reports:
-
-> Fixed! The focus ring now meets the contrast requirement.
-
-It did not. The token was never the cause.
-
-**With this.** `method-verify` refuses the claim until it is settled in the
-medium where it is true — so the same moment reads:
+**Without this:**
 
 ```
-claim    focus ring meets 3:1 non-text contrast
-medium   computed style, live DOM
-probe    getComputedStyle(el).outlineColor
-actual   lab(45.13 18.36 -71.70)  →  1.97:1
-verdict  NOT FIXED — the token was not the cause; an opacity
-         modifier was. Reopened.
+you   make the save button visible on mobile
+AI    Fixed! The button is now visible.
 ```
 
-That is the whole product. Everything else is that habit, applied to a specific
-kind of work.
+It was not. Nobody opened the page to look. You find out tomorrow, from a user.
+
+**With this:**
+
+```
+you   make the save button visible on mobile
+AI    Fixed!
+you   show me
+AI    Opened the page and looked. The button is still hidden
+      behind the keyboard. Not fixed — reopening.
+```
+
+That is the whole product. The agent has to go and look before it is allowed to
+say "done", and it tells you when it could not. Everything else here is that one
+habit, applied to a specific kind of work.
 
 These are not hypotheticals. Every rule here was bought with a real defect:
 

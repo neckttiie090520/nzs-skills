@@ -1,64 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" role="img" aria-label="nzs-skills — nothing is done until it is checked where done is actually true.">
-  <title>nzs-skills</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="nzs-skills. The AI says fixed. You say show me. So it went and looked: it opened the page and the button is still hidden — not fixed; it read the saved data and the name is there; it ran the build and the build passed. Nothing is done until someone actually looks.">
+  <title>nzs-skills — show me</title>
 
   <!--
-    The hero carries the name and the promise. The flow diagram is a separate
-    figure (flow.svg) further down the page — a hero that explains the mechanism
-    before the reader knows what the thing is called has the order backwards.
+    Concept: the claim, the demand, the proof. Third attempt.
+    The first two heroes failed the only test that matters — the owner could not
+    tell what they meant. Both were abstract and both assumed insider knowledge
+    (a measurement grid; a contrast ratio). This one has no metaphor and no
+    jargon: an agent claims, a person asks, and the agent reports what it saw.
 
-    Authored rather than generated: a wordmark has to be typographically exact,
-    and image models cannot set type.
+    One of the three checks FAILS on purpose. A banner where everything passes
+    reads as a QA infographic. The failing row is the product.
   -->
 
   <defs>
     <style>
-      .paper { fill: #f2ece1; }
-      .ink   { fill: #1c1a17; }
-      .red   { fill: #d63c1e; }
-      .hair  { stroke: #1c1a17; stroke-width: 1; opacity: .26; fill: none; }
-      .redln { stroke: #d63c1e; stroke-width: 4; fill: none; }
-      .t     { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; }
-      .word  { font-size: 132px; font-weight: 700; letter-spacing: -.035em; fill: #1c1a17; }
-      .tag   { font-size: 34px; fill: #1c1a17; opacity: .82; }
-      .meta  { font-size: 21px; fill: #1c1a17; opacity: .55; letter-spacing: .04em; }
-      .strike{ font-size: 34px; fill: #1c1a17; opacity: .38; }
+      .paper  { fill: #f2ece1; }
+      .bub    { fill: none; stroke: #1c1a17; stroke-width: 2.6; }
+      .redfill{ fill: #d63c1e; }
+      .redln  { stroke: #d63c1e; stroke-width: 4; fill: none; }
+      .hair   { stroke: #1c1a17; stroke-width: 1; opacity: .26; fill: none; }
+      .row    { stroke: #1c1a17; stroke-width: 1.4; opacity: .3; fill: none; }
+      .t      { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; fill: #1c1a17; }
+      .word   { font-size: 74px; font-weight: 700; letter-spacing: -.03em; }
+      .kicker { font-size: 21px; opacity: .55; letter-spacing: .12em; }
+      .claim  { font-size: 46px; font-weight: 700; }
+      .ask    { font-size: 46px; font-weight: 700; fill: #ffffff; }
+      .did    { font-size: 27px; opacity: .62; }
+      .saw    { font-size: 30px; font-weight: 700; }
+      .lab    { font-size: 20px; opacity: .55; letter-spacing: .12em; }
+      .slog   { font-size: 31px; }
       @media (prefers-color-scheme: dark) {
         .paper { fill: #14120f; }
-        .word, .tag, .meta, .strike { fill: #ece5d8; }
-        .hair  { stroke: #ece5d8; opacity: .2; }
+        .t     { fill: #ece5d8; }
+        .bub   { stroke: #ece5d8; }
+        .hair, .row { stroke: #ece5d8; }
+        .ask   { fill: #14120f; }
       }
     </style>
   </defs>
 
-  <rect class="paper" width="1600" height="620"/>
+  <rect class="paper" width="1600" height="800"/>
 
-  <!-- registration marks + the measure along the foot: the house material -->
   <g class="hair">
-    <path d="M44 44h26M57 31v26"/><path d="M1556 44h-26M1543 31v26"/>
-    <path d="M44 576h26M57 563v26"/><path d="M1556 576h-26M1543 563v26"/>
-    <path d="M96 540h1408"/>
-    <path d="M96 540v-13M167 540v-9M238 540v-9M309 540v-9M380 540v-9M451 540v-13M522 540v-9M593 540v-9M664 540v-9M735 540v-9M806 540v-13M877 540v-9M948 540v-9M1019 540v-9M1090 540v-9M1161 540v-13M1232 540v-9M1303 540v-9M1374 540v-9M1445 540v-9M1504 540v-13"/>
+    <path d="M40 40h24M52 28v24"/><path d="M1560 40h-24M1548 28v24"/>
+    <path d="M40 760h24M52 748v24"/><path d="M1560 760h-24M1548 748v24"/>
   </g>
 
-  <!-- wordmark -->
-  <text class="t word" x="94" y="242">nzs-skills</text>
+  <!-- identity -->
+  <text class="t word"   x="90" y="122">nzs-skills</text>
+  <text class="t kicker" x="94" y="162">SKILLS FOR CLAUDE CODE</text>
 
-  <!-- the red rule: the through-line of the whole visual language -->
-  <path class="redln" d="M96 286h1408"/>
-
-  <!-- the promise, stated as the correction it performs -->
-  <text class="t strike" x="96" y="358">“fixed!”</text>
-  <line x1="96" y1="347" x2="272" y2="347" stroke="#d63c1e" stroke-width="3"/>
-  <text class="t tag" x="300" y="358">→  measured 1.97:1 against 3:1 required.  not fixed.</text>
-
-  <text class="t tag" x="96" y="424">nothing is done until it is checked</text>
-  <text class="t tag" x="96" y="468">where <tspan font-weight="700">“done”</tspan> is actually true.</text>
-
-  <!-- the tick, small, sitting on the measure -->
-  <g transform="translate(1332 372)">
-    <path d="M8 46 l30 32 l68 -76" stroke="#d63c1e" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M4 108h112M4 100v16M116 100v16" stroke="#1c1a17" stroke-width="2.4" fill="none" opacity=".8"/>
+  <!-- ── the exchange ─────────────────────────────────────────── -->
+  <g>
+    <rect class="bub" x="90" y="238" width="392" height="100" rx="14"/>
+    <path class="bub" d="M138 338 v32 l42 -32"/>
+    <text class="t claim" x="122" y="302">Fixed!</text>
+    <text class="t lab"   x="330" y="302">— the AI</text>
   </g>
 
-  <text class="t meta" x="96" y="592">executable skills for Claude Code</text>
+  <g>
+    <rect class="redfill" x="90" y="418" width="392" height="100" rx="14"/>
+    <path class="redfill" d="M434 518 v32 l-42 -32"/>
+    <text class="t ask" x="122" y="482">Show me.</text>
+  </g>
+
+  <text class="t lab" x="94" y="580">— YOU, AND THIS IS THE WHOLE IDEA</text>
+
+  <!-- ── what it went and saw ─────────────────────────────────── -->
+  <text class="t lab" x="700" y="212">SO IT WENT AND LOOKED</text>
+
+  <!-- 1 — the one that fails. This row is the product. -->
+  <g>
+    <text class="t did" x="700" y="272">opened the page</text>
+    <text class="t saw" x="700" y="312">the button is still hidden</text>
+    <g transform="translate(1418 262)">
+      <path d="M0 0 l52 52 M52 0 l-52 52" stroke="#d63c1e" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <text class="t lab" x="700" y="346" fill="#d63c1e" opacity="1">NOT FIXED — REOPENED</text>
+    <path class="row" d="M700 378h790"/>
+  </g>
+
+  <!-- 2 -->
+  <g>
+    <text class="t did" x="700" y="436">read the saved data</text>
+    <text class="t saw" x="700" y="476">the name is there</text>
+    <path d="M1418 444 l20 22 l42 -46" stroke="#1c1a17" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+    <path class="row" d="M700 512h790"/>
+  </g>
+
+  <!-- 3 -->
+  <g>
+    <text class="t did" x="700" y="570">ran the build</text>
+    <text class="t saw" x="700" y="610">it passed</text>
+    <path d="M1418 578 l20 22 l42 -46" stroke="#1c1a17" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+  </g>
+
+  <!-- ── the rule ─────────────────────────────────────────────── -->
+  <path class="redln" d="M90 682h1420"/>
+  <text class="t slog" x="90" y="738">nothing is done until someone actually looks</text>
 </svg>
