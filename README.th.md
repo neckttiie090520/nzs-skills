@@ -97,7 +97,7 @@ skill ไหนในรีโปนี้ระบุชื่อ framework, �
 | **`/nzs-setup`** | เครื่องใหม่ ติดตั้งสภาพแวดล้อมแล้ว *พิสูจน์* ว่าแต่ละตัวใช้ได้จริง |
 | **`/nzs-scrapbook`** | เพิ่งมีอะไรได้ผล หรือเพิ่งพัง บันทึก *รูปแบบ* ของมันลง engram |
 | **`/nzs-handoff`** | บริบทจะหมด หรือจะหยุดทำวันนี้ |
-| **`/nzs-blitz`** | ยิงทุกอย่างใส่การเปลี่ยนแปลงทีเดียว — scrutinize, bug-hunter, codex แล้วส่ง debug-mantra ก่อนอ้างว่าแก้ รายงานเดียวรวม |
+| **`/nzs-areyousure`** | ยิงทุกอย่างใส่การเปลี่ยนแปลงทีเดียว — scrutinize, bug-hunter, codex แล้วส่ง debug-mantra ก่อนอ้างว่าแก้ รายงานเดียวรวม |
 
 ที่เหลือโมเดลหยิบใช้เองหมด
 
@@ -129,7 +129,7 @@ skill ไหนในรีโปนี้ระบุชื่อ framework, �
 | **`nzs-setup`** | ติดตั้งทั้งสภาพแวดล้อม แล้ว *พิสูจน์* ว่าแต่ละตัวใช้งานได้จริง |
 | **`nzs-handoff`** | ย่อ session ยาวให้ agent ตัวถัดไปทำต่อได้จริง |
 | **`nzs-scrapbook`** | บันทึกสิ่งที่ได้ผล, *รูปแบบ* ของความผิดพลาด, และรสนิยมของคุณ ลง engram |
-| **`nzs-blitz`** | รัน scrutinize, bug-hunter, codex ใส่ diff เดียวกัน ส่ง fix ผ่าน debug-mantra ก่อน จบด้วยรายงานเดียว |
+| **`nzs-areyousure`** | รัน scrutinize, bug-hunter, codex ใส่ diff เดียวกัน ส่ง fix ผ่าน debug-mantra ก่อน จบด้วยรายงานเดียว |
 
 **Disciplines** — โมเดลหยิบใช้เอง หนึ่งตัวทำหนึ่งเรื่อง ให้จบ
 
@@ -218,7 +218,7 @@ skill เป็นตัวตัดสินว่า **อะไรนับ�
   โมเดลเรียก กับไฟล์ภาษากลาง นี่คือโครงสร้างของทั้งรีโป `nzs-huddle` ฝั่ง Resolve
   ก็ดัดแปลงมาจาก `grill-me` ของเขาด้วย แต่แยกทางกันแล้ว: ของเราไม่หยุดรอคนตอบ ใช้ subagent แก้แทน
 - [thananon/9arm-skills](https://github.com/thananon/9arm-skills) — `scrutinize`
-  กับ `debug-mantra` ใช้จริงตลอดทั้งวิธีนี้ และถูกเรียกชื่อตรงๆ ใน `nzs-blitz`
+  กับ `debug-mantra` ใช้จริงตลอดทั้งวิธีนี้ และถูกเรียกชื่อตรงๆ ใน `nzs-areyousure`
 - [obra/superpowers](https://github.com/obra/superpowers) — วินัยว่ากระบวนการมาก่อนการลงมือ
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — บีบอัดคำตอบโดยเก็บ
   ข้อเท็จจริงทางเทคนิคครบ และเป็นต้นแบบโครง README ของหน้านี้: เอาหลักฐานขึ้นก่อนปรัชญา

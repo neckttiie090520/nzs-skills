@@ -22,7 +22,7 @@ the 1.2.0 entry, when 1.2.0 actually shipped `ask-nzs → nzs-start` and
 was actually true when it shipped, and added the header note above so it
 does not happen a third time.
 
-**Added `nzs-blitz`.** One command for the full adversarial sweep:
+**Added `nzs-areyousure`.** One command for the full adversarial sweep:
 `scrutinize` (is this diff even the right shape) → `bug-hunter` (its own
 Recon → Hunter → Skeptic → Referee loop) → codex as a genuinely independent
 pass against the same target → `debug-mantra` gating any fix before it is

@@ -254,7 +254,7 @@ mechanical, reviewer — เพื่อให้ config รอดตอนโ�
 **4. การล่า** — `bug-hunter --fix` → `debug-mantra` กับอะไรที่มันอธิบายไม่ได้ → `method-tripwire` กับอะไรที่ซ้ำ
 ขั้นที่สามคือขั้นที่คนข้าม และเป็นขั้นที่ทบต้น: บั๊กชนิดที่โผล่มาสองครั้งได้ guard ถาวร
 
-**4ข. การกวาดทั้งชุด** — `nzs-blitz` เมื่ออยากได้ทุกอย่างในทีเดียว
+**4ข. การกวาดทั้งชุด** — `nzs-areyousure` เมื่ออยากได้ทุกอย่างในทีเดียว
 รวมท่านี้กับอีกสองท่าเข้าคำสั่งเดียว: `scrutinize` ก่อน (diff นี้รูปร่างถูกไหม)
 แล้ว `bug-hunter` แล้ว codex เป็นการตรวจอิสระจริงๆ โดยมี `debug-mantra` คอยเช็ค
 ก่อนอ้างว่าแก้ทุกครั้ง รายงานเดียวรวม ไม่เคยสั่ง `/code-review` เองเด็ดขาด
@@ -382,7 +382,7 @@ generate สองครั้ง พิสูจน์ว่าแก้แล�
 `bug-hunter` (Recon → Hunter → Skeptic → Referee),
 [thananon/9arm-skills](https://github.com/thananon/9arm-skills) — `scrutinize`
 (คนนอก มองตลอดเส้นทาง) กับ `debug-mantra` (วินัยดีบักสี่ขั้นที่ `method-whodunit`
-ถอดมา) มาจากที่นี่ทั้งคู่ และถูกเรียกชื่อตรงๆ ใน `nzs-blitz` — `impeccable`
+ถอดมา) มาจากที่นี่ทั้งคู่ และถูกเรียกชื่อตรงๆ ใน `nzs-areyousure` — `impeccable`
 (พื้นคุณภาพงานออกแบบ), `karpathy-guidelines`
 
 **โครงสร้างพื้นฐาน**
