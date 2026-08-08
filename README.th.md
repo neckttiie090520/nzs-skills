@@ -1,3 +1,5 @@
+<img src="docs/assets/mark.svg" width="72" height="72" alt="สัญลักษณ์ nzs-skills">
+
 # nzs-skills
 
 **ภาษาไทย** · [English](README.md)
@@ -9,7 +11,7 @@
 [![last commit](https://img.shields.io/github/last-commit/neckttiie090520/nzs-skills?style=flat)](https://github.com/neckttiie090520/nzs-skills/commits/main)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
-skills ที่รันได้ ซึ่งหยุด agent ไม่ให้รายงานงานที่มันไม่ได้ทำ
+skills ที่รันได้จริง หยุด agent ไม่ให้รายงานงานที่ยังไม่ได้ทำ
 
 > **เพิ่งมาใหม่ หรือเป็นสาย vibecode มากกว่าสายเขียนโค้ดทั้งวัน?**
 > อ่าน **[เริ่มตรงนี้](docs/START-HERE.th.md)** แทนหน้านี้ สิบห้านาที ไม่มีศัพท์เทคนิค
@@ -38,8 +40,8 @@ AI    เปิดหน้าเว็บไปดูแล้ว ปุ่ม�
       ยังไม่ผ่าน — ขอเปิดงานใหม่
 ```
 
-นี่คือทั้งหมดของมัน AI ต้องไปดูของจริงก่อนถึงจะพูดคำว่า "เสร็จ" ได้ และถ้าดูไม่ได้
-มันต้องบอกคุณ ที่เหลือในนี้คือนิสัยเดียวกันนี้ เอาไปใช้กับงานแต่ละแบบ
+นี่คือแก่นทั้งหมด AI ต้องไปดูของจริงก่อนถึงจะพูดคำว่า "เสร็จ" ได้ ถ้าดูไม่ได้
+ก็ต้องบอกคุณ ที่เหลือในนี้คือนิสัยเดียวกันนี้ เอาไปใช้กับงานแต่ละแบบ
 
 และพวกนี้ไม่ใช่ตัวอย่างสมมติ ทุกกฎในนี้แลกมาด้วยข้อบกพร่องจริง:
 
@@ -61,7 +63,7 @@ AI    เปิดหน้าเว็บไปดูแล้ว ปุ่ม�
 /plugin install nzs-skills@nzs-skills
 ```
 
-หรือก๊อปไฟล์เอง ถ้าอยากอ่านก่อน — ซึ่งควรอ่าน เพราะนี่คือคำสั่งที่ agent จะทำตามบนเครื่องคุณ:
+หรือก๊อปไฟล์เอง ถ้าอยากอ่านก่อน — ควรอ่านด้วย เพราะนี่คือคำสั่งที่ agent จะทำตามบนเครื่องคุณ:
 
 ```bash
 git clone https://github.com/neckttiie090520/nzs-skills.git
@@ -69,8 +71,8 @@ cp -r nzs-skills/skills/* ~/.claude/skills/        # ใช้ได้ทุก
 cp -r nzs-skills/skills/* .claude/skills/          # หรือเฉพาะโปรเจกต์นี้
 ```
 
-**แล้ว restart Claude Code** skills, plugins และ MCP server ถูกอ่านตอนเปิด session
-อะไรที่ติดตั้งระหว่างทางจะอยู่บนดิสก์แต่ไม่ถูกโหลด ขั้นนี้แหละที่ทำให้การติดตั้งที่ถูกต้อง
+**แล้ว restart Claude Code** — skills, plugins และ MCP server โหลดตอนเปิด session เท่านั้น
+อะไรที่ติดตั้งระหว่างทางจะอยู่บนดิสก์แต่ยังไม่โหลด ขั้นนี้แหละที่ทำให้การติดตั้งที่ถูกต้อง
 ดูเหมือนพัง
 
 จากนั้นในโปรเจกต์ไหนก็ได้:
@@ -163,7 +165,7 @@ skill ชั้นบนเรียก discipline ได้ แต่ **ห้�
 ## จุดอ่อนที่รู้ตัว
 
 ประตูกันการแสดงละคร **ยังตรวจตัวเองอยู่** โมเดลติ๊กช่องเองได้ และแปะผลลัพธ์คำสั่งที่แต่งขึ้นเองได้
-ไม่มีใครจากข้างนอกมาเป็นพยาน `nzs-roundtable` ฝั่ง Judge คือสิ่งที่ใกล้เคียงพยานภายนอกที่สุดที่มี และมันยังไม่พอ
+ไม่มีใครจากข้างนอกมาเป็นพยาน `nzs-roundtable` ฝั่ง Judge คือสิ่งที่ใกล้เคียงพยานภายนอกที่สุดที่มี แต่ยังไม่พอ
 
 การบังคับให้ผู้รีวิวอิสระรันซ้ำสำหรับข้ออ้างที่สำคัญ คือการตัดสินใจที่ยังค้างอยู่
 
@@ -211,20 +213,20 @@ skill เป็นตัวตัดสินว่า **อะไรนับ�
 [คู่มือระบบนิเวศ](docs/ECOSYSTEM.th.md#เครดิต) ตัวที่สำคัญที่สุด:
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) — การแบ่งชั้นผู้ใช้เรียก /
-  โมเดลเรียก และไฟล์ภาษากลาง ซึ่งเป็นโครงสร้างของรีโปนี้ทั้งรีโป `nzs-roundtable` ฝั่ง Resolve ดัดแปลงมาจาก
-  `grill-me` ของเขา แต่แยกทางกันแล้ว: ของเราไม่หยุดรอคนตอบ ใช้ subagent แก้แทน
+  โมเดลเรียก กับไฟล์ภาษากลาง นี่คือโครงสร้างของทั้งรีโป `nzs-roundtable` ฝั่ง Resolve
+  ก็ดัดแปลงมาจาก `grill-me` ของเขาด้วย แต่แยกทางกันแล้ว: ของเราไม่หยุดรอคนตอบ ใช้ subagent แก้แทน
 - [obra/superpowers](https://github.com/obra/superpowers) — วินัยว่ากระบวนการมาก่อนการลงมือ
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — บีบอัดคำตอบโดยเก็บ
   ข้อเท็จจริงทางเทคนิคครบ และเป็นต้นแบบโครง README ของหน้านี้: เอาหลักฐานขึ้นก่อนปรัชญา
 - [fivetaku/fablize](https://github.com/fivetaku/fablize) — กฎเรื่องหลักฐานเดียวกัน แต่บังคับ
-  ในรูปแบบ hook ซึ่งเป็นชั้นที่วิธีนี้เอื้อมไม่ถึง
+  ในรูปแบบ hook ชั้นที่วิธีนี้เอื้อมไม่ถึงเอง
 - [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) และ
   [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
   — ปลั๊กอินที่วิธีนี้ทำงานเคียงข้างทุกวัน
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
   — คลัง security ที่แถว `ความปลอดภัย` ยืมแบบแผนมา
 - **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP** และ
-  Claude Code เอง ซึ่งเป็นพื้นที่ทั้งหมดนี้รันอยู่
+  Claude Code เอง — พื้นที่ที่ทั้งหมดนี้รันอยู่
 
 ---
 

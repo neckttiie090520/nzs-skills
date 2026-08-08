@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="nzs-skills mark: a checkmark measured against a tick, inside registration corners.">
+  <title>nzs-skills</title>
+
+  <!--
+    The square logomark. Legible from 128px down to a 16px favicon-scale render
+    — one shape, one colour accent, no fine detail that disappears at small
+    size. Same material as banner.svg / flow.svg: cream, ink, vermilion,
+    registration corners as the house motif.
+
+    The mark is the thesis in one shape: a checkmark is a claim; the tick
+    marks beside it are what measures the claim. Most logos would draw the
+    check alone. This one draws the measuring too.
+  -->
+
+  <defs>
+    <style>
+      .paper { fill: #f2ece1; }
+      .ink   { stroke: #1c1a17; }
+      .red   { stroke: #d63c1e; }
+      @media (prefers-color-scheme: dark) {
+        .paper { fill: #14120f; }
+        .ink   { stroke: #ece5d8; }
+      }
+    </style>
+  </defs>
+
+  <rect class="paper" width="128" height="128" rx="14"/>
+
+  <!-- registration corners, the house motif, at a scale that still reads small -->
+  <g class="ink" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".55">
+    <path d="M14 14h11M14 14v11"/>
+    <path d="M114 14h-11M114 14v11"/>
+    <path d="M14 114h11M14 114v-11"/>
+    <path d="M114 114h-11M114 114v-11"/>
+  </g>
+
+  <!-- the tick, measured: a fine ruler edge under the check -->
+  <g class="ink" stroke-width="2" opacity=".5">
+    <path d="M34 90h60"/>
+    <path d="M34 90v6M44 90v4M54 90v4M64 90v6M74 90v4M84 90v4M94 90v6"/>
+  </g>
+
+  <!-- the claim: one bold vermilion check, sitting on the measure -->
+  <path class="red" d="M40 62 l16 17 l32 -38" stroke-width="11" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

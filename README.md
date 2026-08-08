@@ -1,3 +1,5 @@
+<img src="docs/assets/mark.svg" width="72" height="72" alt="nzs-skills mark">
+
 # nzs-skills
 
 **English** · [ภาษาไทย](README.th.md)
