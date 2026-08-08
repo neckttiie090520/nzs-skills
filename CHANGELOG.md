@@ -2,6 +2,18 @@
 
 Notable changes. Dates are when the change landed on `main`.
 
+## 1.3.0 — 2026-08-09
+
+**Breaking: `nzs-grill` and `nzs-panel` merged into `nzs-roundtable`.** Both
+seated the same three roles (biased outsider, opinionated CTO, senior
+arbiter) — Grill against many branches of a shapeless request, Panel against
+one already-formed decision. One engine, two scopes, one name: `Resolve` ends
+in an artifact, `Judge` ends in a verdict. See
+[ADR 0006](docs/adr/0006-grill-and-panel-merge-into-roundtable.md).
+
+If you invoke `/nzs-grill` or `/nzs-panel` directly, use `/nzs-roundtable`
+instead — routing through `nzs-start` already picks the right job for you.
+
 ## 1.2.0 — 2026-08-08
 
 **Renamed eleven skills, plus the bare `method`.** Names that could not be

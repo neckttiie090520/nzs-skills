@@ -127,8 +127,7 @@ Everything else the AI picks up on its own. You only need these.
 | type this | when |
 |---|---|
 | `/nzs-start` | **any time you're unsure.** It plans which tools to use |
-| `/nzs-grill` | a vague idea — it resolves the unclear parts itself, by spawning subagents, and does not wait on you |
-| `/nzs-panel` | you want it argued with — a biased outsider, a hard-to-please CTO, and a senior who corrects them both |
+| `/nzs-roundtable` | a vague idea to resolve, or a decision to argue with — seats a biased outsider, a CTO, and a senior. Never waits on you |
 | `/nzs-learn` | something just worked, or just broke, and you want it remembered |
 | `/nzs-handoff` | you're out of context or stopping for the day |
 

@@ -25,22 +25,22 @@ sequence.
 | "how do users", "is this real" | discover | `method-discovery` |
 | credentials, money, other people's data, uploads, external input | build, but model it first | `method-threat` → `method-plan` |
 | a leaked key, "rotate", .env, a repo about to go public | contain | `method-secrets` |
-| vague want, "something like…", no clear scope | elicit | `nzs-grill` |
-| a decision that needs an argument, not a checklist | challenge | `nzs-panel` |
+| vague want, "something like…", no clear scope | elicit | `nzs-roundtable` (Resolve) |
+| a decision that needs an argument, not a checklist | challenge | `nzs-roundtable` (Judge) |
 
 If the request is a reference plus a build ("make our page like theirs"),
 acquisition runs FIRST and its output is what planning may cite. Never plan
 from a raw reference.
 
-**When the job is underspecified, `nzs-grill` comes before everything.** A stack
-built on a request nobody has pinned down is a stack that will be rebuilt. Grill
-ends in an artifact — a spec, an assumption map, extracted rules — and that
-artifact is what the rest of the stack consumes.
+**When the job is underspecified, `nzs-roundtable`'s Resolve job comes before
+everything.** A stack built on a request nobody has pinned down is a stack that
+will be rebuilt. It ends in an artifact — a spec, an assumption map, extracted
+rules — and that artifact is what the rest of the stack consumes.
 
-**`nzs-panel` is not a review round.** `method-review` rotates disciplines over a
-diff; the panel casts people with interests, and it earns its place when the open
-question is *whether this should exist or who it is for* — not whether the code
-is correct.
+**Its Judge job is not a review round.** `method-review` rotates disciplines
+over a diff; Judge casts people with interests, and it earns its place when the
+open question is *whether this should exist or who it is for* — not whether
+the code is correct.
 
 ## 1b. The lifecycle skills — never in the stack, sometimes the answer
 

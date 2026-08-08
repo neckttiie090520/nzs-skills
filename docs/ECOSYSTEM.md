@@ -315,7 +315,7 @@ The measurement step is non-negotiable: an eyeballed "about 510px" was wrong by
 73px, and only a measurement said so.
 
 **"Is this feature worth building?"**
-`nzs-grill` (agentic — spawns subagents to resolve branches, no waiting on you) if the want is vague → `method-discovery` (is the assumption true?)
+`nzs-roundtable` (Resolve job — spawns subagents, no waiting on you) if the want is vague → `method-discovery` (is the assumption true?)
 → `method-decide` → `method-cost` if it costs money per use. A `decide`
 that says *don't build* is a success, and is recorded with its price so nobody
 re-derives it.
@@ -407,7 +407,8 @@ merely admired.
 **Skills and conventions**
 - [mattpocock/skills](https://github.com/mattpocock/skills) — the user-invoked /
   model-invoked split and the shared-language file, which is the structure of
-  this entire repo. `nzs-grill` is adapted from his `grill-me`, since diverged to be fully agentic.
+  this entire repo. `nzs-roundtable`'s Resolve job is adapted from his `grill-me`, since
+  diverged to be fully agentic.
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
   — 817 security skills across 29 domains, framework-mapped. Not vendored (see
   [ADR 0004](adr/0004-security-scoped-to-what-we-ship.md)); its per-skill

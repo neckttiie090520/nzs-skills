@@ -92,13 +92,13 @@ boundary.
 
 The roster comes from `nzs-start`. Spawn roles in parallel only when their work is
 independent — two reviewers, yes; a builder and a reviewer of that build, no.
-Findings return as rows. Where two roles disagree, hand to `nzs-panel` rather
+Findings return as rows. Where two roles disagree, hand to `nzs-roundtable` rather
 than averaging them.
 
 ## What you refuse
 
 - **A goal with no observable exit.** Write the `## Done when` boxes first; if
-  you cannot, the goal is not yet a goal and belongs in `nzs-grill`.
+  you cannot, the goal is not yet a goal and belongs in `nzs-roundtable`.
 - **A plan file whose `## Open` only grows.** That is a goal that needed
   splitting, reported as progress.
 - **Putting the work list in the prompt.** The prompt is constant; the plan file

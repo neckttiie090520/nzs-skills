@@ -275,7 +275,7 @@ mechanical, reviewer — เพื่อให้ config รอดตอนโ�
 ขั้นวัดห้ามข้าม: เคยกะด้วยตาว่า "ประมาณ 510px" แล้วผิดไป 73px มีแต่การวัดที่บอกได้
 
 **"ฟีเจอร์นี้คุ้มที่จะทำไหม"**
-`nzs-grill` ถ้าโจทย์ยังคลุมเครือ → `method-discovery` (ข้อสมมติจริงไหม) → `method-decide`
+`nzs-roundtable` (Resolve) ถ้าโจทย์ยังคลุมเครือ → `method-discovery` (ข้อสมมติจริงไหม) → `method-decide`
 → `method-cost` ถ้ามีค่าใช้จ่ายต่อครั้ง ผลลัพธ์ที่บอกว่า *อย่าทำ* คือความสำเร็จ และถูก
 บันทึกพร้อมราคาไว้ ไม่ต้องมีใครมานั่งคิดใหม่
 
@@ -354,7 +354,7 @@ generate สองครั้ง พิสูจน์ว่าแก้แล�
 
 **Skills และแบบแผน**
 - [mattpocock/skills](https://github.com/mattpocock/skills) — การแบ่งชั้นผู้ใช้เรียก /
-  โมเดลเรียก และไฟล์ภาษากลาง ซึ่งเป็นโครงสร้างของรีโปนี้ทั้งรีโป `nzs-grill` ดัดแปลงมาจาก
+  โมเดลเรียก และไฟล์ภาษากลาง ซึ่งเป็นโครงสร้างของรีโปนี้ทั้งรีโป `nzs-roundtable` ฝั่ง Resolve ดัดแปลงมาจาก
   `grill-me` ของเขา
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
   — 817 security skills ครอบคลุม 29 โดเมน แมปกับเฟรมเวิร์กมาตรฐาน ไม่ได้เอามารวม
