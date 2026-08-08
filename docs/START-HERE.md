@@ -55,7 +55,7 @@ kind of work.
 
 If the install says `Run /reload-plugins to activate`, run that.
 
-**Check it worked.** Type `/` and you should see `nzs-compass` in the list. If you
+**Check it worked.** Type `/` and you should see `nzs-go` in the list. If you
 don't, the install didn't take — see [When it doesn't work](#when-it-doesnt-work).
 
 ---
@@ -65,7 +65,7 @@ don't, the install didn't take — see [When it doesn't work](#when-it-doesnt-wo
 Don't read the skill list. Just ask:
 
 ```
-/nzs-compass I want to add a login page to my app
+/nzs-go I want to add a login page to my app
 ```
 
 You will get back a **plan of which skills to use, in order**, and — the part
@@ -126,19 +126,19 @@ Everything else the AI picks up on its own. You only need these.
 
 | type this | when |
 |---|---|
-| `/nzs-compass` | **any time you're unsure.** It plans which tools to use |
+| `/nzs-go` | **any time you're unsure.** It plans which tools to use |
 | `/nzs-huddle` | a vague idea to resolve, or a decision to argue with — seats a biased outsider, a CTO, and a senior. Never waits on you |
 | `/nzs-scrapbook` | something just worked, or just broke, and you want it remembered |
-| `/nzs-baton` | you're out of context or stopping for the day |
+| `/nzs-handoff` | you're out of context or stopping for the day |
 
-There is also `/nzs-bootcamp` for a fresh machine, and `/nzs-marathon` for jobs too big
+There is also `/nzs-setup` for a fresh machine, and `/nzs-marathon` for jobs too big
 for one sitting.
 
 ---
 
 ## "Which one do I need?" — in plain words
 
-You never have to memorise this. `/nzs-compass` picks for you. But if you like
+You never have to memorise this. `/nzs-go` picks for you. But if you like
 knowing what's in the box:
 
 | what you're thinking | the skill |
@@ -177,7 +177,7 @@ written down so the AI asks it of itself before you have to.
 
 ## When it doesn't work
 
-**`/nzs-compass` doesn't appear when I type `/`**
+**`/nzs-go` doesn't appear when I type `/`**
 Almost always the session has not reloaded. Claude Code reads its skill, plugin
 and MCP registries **at startup**, so anything installed mid-session is on disk
 but not loaded. Run `/reload-plugins`, and if that is not enough, **restart

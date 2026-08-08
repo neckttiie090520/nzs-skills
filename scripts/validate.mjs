@@ -143,10 +143,10 @@ ran("cross-references", linkCount);
 
 // ------------------------------- 4. every entry point is reachable and wired
 //
-// nzs-compass once named exactly one of the six nzs-* skills. Five entry points
+// nzs-go once named exactly one of the six nzs-* skills. Five entry points
 // existed and no request could reach them.
 
-const ROUTER = "nzs-compass";
+const ROUTER = "nzs-go";
 // The router is an entry point too, but it cannot be required to route to
 // itself — you reach it by typing its name.
 const entryPoints = [...skills.keys()].filter((n) => n.startsWith("nzs-") && n !== ROUTER);

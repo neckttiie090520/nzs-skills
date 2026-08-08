@@ -1,9 +1,9 @@
 ---
-name: nzs-bootcamp
+name: nzs-setup
 description: Installs and VERIFIES the whole working environment in a workspace — the nzs-skills set, plus codegraph, engram, headroom, rtk, caveman and fablize — then writes .method/config.yml. Every tool is proven working by running it, never by reporting that it was installed. Use on a fresh workspace, a new machine, or when the user says ติดตั้ง / setup / เตรียมเครื่อง / set this project up / install everything.
 ---
 
-# nzs-bootcamp
+# nzs-setup
 
 You install an environment and then PROVE each piece works. An installer that
 reports success it did not check is the failure this whole set exists to

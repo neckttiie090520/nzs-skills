@@ -47,6 +47,6 @@ them.
 - **The security skills describe defensive review** — authorization tracing,
   threat modelling, secret handling, application and AI security. They are for
   systems you own or are authorised to test.
-- `nzs-bootcamp` installs tooling and asks before doing anything expensive or
+- `nzs-setup` installs tooling and asks before doing anything expensive or
   irreversible, such as indexing a whole repository. If a skill here ever takes
   an irreversible action without asking, that is a bug worth reporting.

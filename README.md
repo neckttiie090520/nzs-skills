@@ -80,7 +80,7 @@ that makes a correct install look broken.
 Then, in any project:
 
 ```
-/nzs-compass I need to add rate limiting to the public API
+/nzs-go I need to add rate limiting to the public API
 ```
 
 The first run writes `.method/config.yml` via `method-groundwork`. Everything
@@ -94,12 +94,13 @@ currency.**
 
 | command | when |
 |---|---|
-| **`/nzs-compass`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
+| **`/nzs-go`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
 | **`/nzs-huddle`** | a vague idea to resolve, or a decision to attack — seats a biased outsider, a hard-to-please CTO, and a senior who arbitrates. Never waits on you |
 | **`/nzs-marathon`** | work too big for one sitting. Writes a `/goal` prompt and a plan file the loop re-reads, built to terminate |
-| **`/nzs-bootcamp`** | a fresh machine. Installs the environment and *proves* each piece works |
+| **`/nzs-setup`** | a fresh machine. Installs the environment and *proves* each piece works |
 | **`/nzs-scrapbook`** | something worked, or broke. Records the *shape* of it into engram |
-| **`/nzs-baton`** | out of context, or stopping for the day |
+| **`/nzs-handoff`** | out of context, or stopping for the day |
+| **`/nzs-crucible`** | throw everything at a change at once — scrutinize, bug-hunter, codex, then debug-mantra on any fix, one merged report |
 
 Everything else the model reaches for on its own.
 
@@ -107,10 +108,10 @@ Everything else the model reaches for on its own.
 
 ## How it works
 
-![the flow: you ask, nzs-compass plans a stack, tools gather evidence, nothing ships without it](docs/assets/flow.svg)
+![the flow: you ask, nzs-go plans a stack, tools gather evidence, nothing ships without it](docs/assets/flow.svg)
 
 1. **You ask.** Plain language, in any language.
-2. **`nzs-compass` returns a stack, not a menu.** A router that hands you three
+2. **`nzs-go` returns a stack, not a menu.** A router that hands you three
    options has given the decision back to you.
 3. **The skills send tools to look** — the live DOM for a rendered claim, real
    rows for a persistence claim, the ledger for cost, a command's exit code for
@@ -126,12 +127,13 @@ Everything else the model reaches for on its own.
 
 | skill | what it does |
 |---|---|
-| **`nzs-compass`** | returns the skill *stack* for a job, with an observable exit condition |
+| **`nzs-go`** | returns the skill *stack* for a job, with an observable exit condition |
 | **`nzs-marathon`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
 | **`nzs-huddle`** | resolves a shapeless request into an artifact, or judges a formed decision into a verdict — same three seats, agentic, never waits on you |
-| **`nzs-bootcamp`** | installs the whole environment and *proves* each piece works |
-| **`nzs-baton`** | compacts a session into something the next agent can resume from |
+| **`nzs-setup`** | installs the whole environment and *proves* each piece works |
+| **`nzs-handoff`** | compacts a session into something the next agent can resume from |
 | **`nzs-scrapbook`** | records wins, mistake *shapes*, and your taste — into engram |
+| **`nzs-crucible`** | runs scrutinize, bug-hunter and codex against the same diff, routes fixes through debug-mantra first, ends in one report |
 
 **Disciplines.** The model reaches for these. One thing each, done properly.
 

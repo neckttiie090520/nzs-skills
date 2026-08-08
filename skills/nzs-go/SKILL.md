@@ -1,9 +1,9 @@
 ---
-name: nzs-compass
+name: nzs-go
 description: The router for nzs-skills. Given a job, returns the skill STACK — which skills, in what order, and the loop that finishes the work with its exit condition stated as an observable. Use when you do not know which skill fits, when a job spans several stages, or when the user asks ใช้อันไหน / เริ่มยังไง / which skill / what's the plan / how do I approach this.
 ---
 
-# nzs-compass
+# nzs-go
 
 You return a plan, not a menu. One stack, ordered, with an exit condition
 anybody can check. A router that offers three options has decided nothing and
@@ -27,6 +27,7 @@ sequence.
 | a leaked key, "rotate", .env, a repo about to go public | contain | `method-vault` |
 | vague want, "something like…", no clear scope | elicit | `nzs-huddle` (Resolve) |
 | a decision that needs an argument, not a checklist | challenge | `nzs-huddle` (Judge) |
+| "everything you've got", "sweep this", "hit it with everything" | sweep | `nzs-crucible` |
 
 If the request is a reference plus a build ("make our page like theirs"),
 acquisition runs FIRST and its output is what planning may cite. Never plan
@@ -50,8 +51,8 @@ and route there instead of classifying it as work:
 
 | the request carries | route to |
 |---|---|
-| "set this up", ติดตั้ง, a fresh workspace or machine | `nzs-bootcamp` |
-| "hand this over", running out of context, ending a session | `nzs-baton` |
+| "set this up", ติดตั้ง, a fresh workspace or machine | `nzs-setup` |
+| "hand this over", running out of context, ending a session | `nzs-handoff` |
 | "remember this", จำไว้, or the user just corrected you | `nzs-scrapbook` |
 
 The last one also fires unprompted: **a correction from the user is the highest-value

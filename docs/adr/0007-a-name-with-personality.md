@@ -3,6 +3,11 @@
 **Status:** accepted
 **Date:** 2026-08-09
 
+*(`nzs-compass`, `nzs-bootcamp`, and `nzs-baton` — three names this ADR
+introduced — were reconsidered the same day; see the 1.5.0 entry in
+CHANGELOG.md. This entry keeps the names this decision actually shipped
+with.)*
+
 ## Context
 
 ADR 0005 renamed eleven skills that were structurally unreadable — initialisms

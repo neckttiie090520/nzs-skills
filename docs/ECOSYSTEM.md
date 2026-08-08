@@ -9,7 +9,7 @@ something that can actually read a database, drive a browser, index a codebase,
 or remember last week. This page is the other half: every tool this method
 composes with, what it is, what it buys, how to use it, and where it fails.
 
-Read it once. After that, `nzs-compass` will name the stack for you.
+Read it once. After that, `nzs-go` will name the stack for you.
 
 **Never used this set before?** Read [Start here](START-HERE.md) first — this
 page assumes you have.
@@ -33,7 +33,7 @@ would be worthless the day you changed drivers. Instead, every project writes
 `.method/config.yml` once (via `method-groundwork`) and every skill reads *that*.
 
 ```
-        you ── /nzs-compass ──▶ a stack of skills          ← the method (this repo)
+        you ── /nzs-go ──▶ a stack of skills          ← the method (this repo)
                               │
                               ▼
                     .method/config.yml                  ← what THIS project uses
@@ -51,7 +51,7 @@ would be worthless the day you changed drivers. Instead, every project writes
 ## What is on this page, and what is deliberately not
 
 Every tool below can be **installed and then proven working by a command**, which
-is what `nzs-bootcamp` does. That is the entry requirement.
+is what `nzs-setup` does. That is the entry requirement.
 
 Anything that needs a human to open a browser, create an account and paste a key
 back is excluded — not because it is bad, but because a setup step cannot verify
@@ -149,7 +149,7 @@ working window and bring it back on demand; `headroom_stats` reports the state.
 put more than a screenful into the main window, it is a subagent"* — is the
 policy; headroom is one of the mechanisms that makes it affordable.
 
-### `handoff.md` + `nzs-baton` — continuity between sessions
+### `handoff.md` + `nzs-handoff` — continuity between sessions
 
 **What it is.** A plain file at the repo root, named by `config.handoff`.
 
@@ -206,7 +206,7 @@ compression is for prose, and ambiguity is never an acceptable saving.
 Rewrites common CLI calls into filtered equivalents, cutting 60–90% of the
 tokens a raw `git status` or build log would cost. `rtk gain` shows the savings.
 
-**The trap `nzs-bootcamp` checks for.** There is a *different* package called `rtk`
+**The trap `nzs-setup` checks for.** There is a *different* package called `rtk`
 (a Rust type kit) that answers `--version` perfectly and fails `gain`. Verifying
 with `--version` alone reports a successful install of the wrong software. Both
 commands must answer.
@@ -215,7 +215,7 @@ commands must answer.
 
 Establishes that process skills run *before* implementation skills: brainstorm
 before planning, systematic debugging before domain fixes. Compatible with this
-set by design — `nzs-compass` occupies the same slot for this method's own skills.
+set by design — `nzs-go` occupies the same slot for this method's own skills.
 
 ### fablize — the same rule, enforced mechanically
 
@@ -291,6 +291,14 @@ when you feel finished.
 The third step is the one people skip and the one that compounds: a bug class
 that appeared twice earns a guard, permanently.
 
+**4b. The sweep** — `nzs-crucible`, when you want everything at once
+Formalises this stance plus two more into one command: `scrutinize` first
+(is this diff even the right shape), then `bug-hunter`, then codex as a
+genuinely independent pass, with `debug-mantra` gating any fix before it is
+claimed. One merged report instead of four. Deliberately never auto-triggers
+`/code-review` — that one is billed and user-invoked, named as an available
+escalation rather than run.
+
 **5. The long run** — `nzs-marathon` → `/goal` + `/loop`, with headroom and subagents
 For work too big for one window. The prompt stays constant; the plan file
 changes. It stops when `## Open` is empty **or** two consecutive iterations
@@ -299,7 +307,7 @@ change no Ledger row — a loop that cannot show progress is not making any.
 **6. Shipping** — `method-witness` → `method-launch`
 Production schema is verified **before** the push that needs it, not after.
 
-**7. Closing a session** — `nzs-scrapbook` then `nzs-baton`
+**7. Closing a session** — `nzs-scrapbook` then `nzs-handoff`
 Learn first, while the insight is sharp; hand off second, once there is nothing
 left to record.
 
@@ -337,11 +345,11 @@ questions → `method-tab` for the ceiling → `method-tripwire` for the spend
 bound. Model output is untrusted input, and the sink decides what it can do.
 
 **"Set up a new machine / workspace."**
-`nzs-bootcamp`. It installs and then *proves* each piece, and reports anything it
+`nzs-setup`. It installs and then *proves* each piece, and reports anything it
 could not verify as **unverified** rather than done.
 
 **"I'm out of context."**
-`nzs-scrapbook` → `nzs-baton`.
+`nzs-scrapbook` → `nzs-handoff`.
 
 **"I found a credential in old chat history / a commit / a log."**
 `method-vault` — exposure is rotation, not cleanup: rotate first, revoke,
@@ -380,7 +388,7 @@ test. *Rule: `method-tripwire` — a guard is not trusted until it has been seen
 failing on a real mutation and passing when restored.* The same trap then hit
 this repo's validator, which is why `.gitattributes` pins `eol=lf`.
 
-**The router that could not reach its own entry points.** `nzs-compass` — the skill
+**The router that could not reach its own entry points.** `nzs-go` — the skill
 whose entire job is finding the right skill — named exactly one of six
 user-invoked skills. Five were unreachable from any request. Three adversarial
 review rounds missed it because every round *used* the router and none asked

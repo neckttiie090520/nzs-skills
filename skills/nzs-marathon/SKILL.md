@@ -59,7 +59,7 @@ must not. Compose it from:
 3. **The doctrine that must not be re-derived** — evidence before assertion,
    verify in the medium where the claim is true, a guard seen failing before it
    is trusted, nothing declared done from reading a diff.
-4. **The roster** — which roles may be spawned for this job, from `nzs-compass`.
+4. **The roster** — which roles may be spawned for this job, from `nzs-go`.
 5. **The stop rules**, below.
 
 Aim for 3,500–4,000 characters. Longer and the model skims it; shorter and it
@@ -90,7 +90,7 @@ boundary.
 
 ## Spawning the team
 
-The roster comes from `nzs-compass`. Spawn roles in parallel only when their work is
+The roster comes from `nzs-go`. Spawn roles in parallel only when their work is
 independent — two reviewers, yes; a builder and a reviewer of that build, no.
 Findings return as rows. Where two roles disagree, hand to `nzs-huddle` rather
 than averaging them.

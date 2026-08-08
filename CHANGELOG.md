@@ -1,6 +1,35 @@
 # Changelog
 
-Notable changes. Dates are when the change landed on `main`.
+Notable changes. Dates are when the change landed on `main`. Each entry names
+skills using whatever they were called **at that version** — a changelog is a
+historical record, not living documentation, and rewriting past entries to
+match the current names would erase the fact that the earlier name ever
+existed.
+
+## 1.5.0 — 2026-08-09
+
+**Three names reconsidered from 1.4.0's pass.** `nzs-compass` → `nzs-go`
+(shorter), `nzs-bootcamp` → `nzs-setup` (back to plain — installing an
+environment doesn't need a costume), `nzs-baton` → `nzs-handoff` (same
+reasoning). Owner's call on all three, after living with 1.4.0's names for
+a day.
+
+Also fixed: 1.4.0's own rename script had rewritten *this file's* older
+entries (1.1.0 and 1.2.0), and four ADRs (0001, 0003, 0004, 0006), to use
+names that did not exist yet at those versions — `ask-nzs → nzs-compass` in
+the 1.2.0 entry, when 1.2.0 actually shipped `ask-nzs → nzs-start` and
+`nzs-compass` was not coined until 1.4.0. Restored every one of them to what
+was actually true when it shipped, and added the header note above so it
+does not happen a third time.
+
+**Added `nzs-crucible`.** One command for the full adversarial sweep:
+`scrutinize` (is this diff even the right shape) → `bug-hunter` (its own
+Recon → Hunter → Skeptic → Referee loop) → codex as a genuinely independent
+pass against the same target → `debug-mantra` gating any fix before it is
+claimed done. Merges all four into one report rather than four stapled
+together. Deliberately never auto-triggers `/code-review` — that one is
+billed and user-invoked, so it is named in the report as an available
+escalation, never run on the user's behalf.
 
 ## 1.4.0 — 2026-08-09
 
@@ -21,35 +50,38 @@ every skill's H1 against its own directory name, so this class of drift
 cannot survive a rename silently again.
 
 If you use any skill by its old name, use the new one from the table above —
-routing through `nzs-compass` (was `nzs-start`) already resolves correctly
-regardless of what you call things.
+routing through `nzs-start` (its name at the time) already resolved
+correctly regardless of what you called things. (`nzs-start` itself is now
+`nzs-go` — see 1.5.0.)
 
 ## 1.3.0 — 2026-08-09
 
-**Breaking: `nzs-grill` and `nzs-panel` merged into `nzs-huddle`.** Both
+**Breaking: `nzs-grill` and `nzs-panel` merged into `nzs-roundtable`.** Both
 seated the same three roles (biased outsider, opinionated CTO, senior
 arbiter) — Grill against many branches of a shapeless request, Panel against
 one already-formed decision. One engine, two scopes, one name: `Resolve` ends
 in an artifact, `Judge` ends in a verdict. See
 [ADR 0006](docs/adr/0006-grill-and-panel-merge-into-roundtable.md).
 
-If you invoke `/nzs-grill` or `/nzs-panel` directly, use `/nzs-huddle`
-instead — routing through `nzs-compass` already picks the right job for you.
+If you invoke `/nzs-grill` or `/nzs-panel` directly, use `/nzs-roundtable`
+instead — routing through `nzs-start` already picks the right job for you.
+(`nzs-roundtable` was later renamed `nzs-huddle` in 1.4.0.)
 
 ## 1.2.0 — 2026-08-08
 
 **Renamed eleven skills, plus the bare `method`.** Names that could not be
-decoded without reading the file. `method-se` → `method-craft`,
-`method-doctrine` → `method-rulebook`, `method-robust` → `method-stress-test`,
-`method-pm` → `method-brief`, `method-register` → `method-logbook`,
-`method-economics` → `method-tab`, `method-visual` → `method-sketch`,
-`method-ideate` → `method-longlist`, `method-appsec` → `method-trapdoor`,
-`method-aisec` → `method-puppeteer`, `ask-nzs` → **`nzs-compass`**, and
-`method` → `method-conductor`. Reasoning and cost in
-[ADR 0005](docs/adr/0005-plain-names-over-precise-ones.md).
+decoded without reading the file. `method-se` → `method-code`,
+`method-doctrine` → `method-evidence`, `method-robust` → `method-harden`,
+`method-pm` → `method-scope`, `method-register` → `method-record`,
+`method-economics` → `method-cost`, `method-visual` → `method-design`,
+`method-ideate` → `method-ideas`, `method-appsec` → `method-web-security`,
+`method-aisec` → `method-ai-security`, `ask-nzs` → **`nzs-start`**, and
+`method` → `method-run`. Reasoning and cost in
+[ADR 0005](docs/adr/0005-plain-names-over-precise-ones.md). (All eleven were
+renamed again in 1.4.0's personality pass — see that entry for current names.)
 
 **Breaking for anyone who installed 1.1.0.** Re-run the install; the old
-directories are gone. `/ask-nzs` is now `/nzs-compass`.
+directories are gone. `/ask-nzs` is now `/nzs-start`.
 
 **Added [`docs/START-HERE.md`](docs/START-HERE.md)** (and the Thai edition) —
 a front door for people who describe what they want and ship it, rather than
@@ -59,17 +91,18 @@ need" table, and troubleshooting for what actually goes wrong.
 
 **Validator fixes the rename exposed.** It required the router to route to
 itself; and its cross-reference pattern was `[a-z]+`, so two-word names like
-`method-trapdoor` matched nothing and every reference to them was silently
-unchecked.
+`method-web-security` matched nothing and every reference to them was
+silently unchecked.
 
 ## 1.1.0 — 2026-08-08
 
-**Five security disciplines.** `method-lockpick` (the discipline behind the
+**Five security disciplines.** `method-security` (the discipline behind the
 `security` review role, which the review table already selected in four of its
-six rows while nothing defined it), `method-lookout`, `method-vault`,
-`method-trapdoor`, `method-puppeteer`. Scoped to what this method is used
+six rows while nothing defined it), `method-threat`, `method-secrets`,
+`method-web-security`, `method-ai-security`. Scoped to what this method is used
 on rather than to a domain encyclopedia — see
-[ADR 0004](docs/adr/0004-security-scoped-to-what-we-ship.md).
+[ADR 0004](docs/adr/0004-security-scoped-to-what-we-ship.md). (All five were
+renamed again in 1.4.0 — see that entry for current names.)
 
 **[`docs/ECOSYSTEM.md`](docs/ECOSYSTEM.md)** (+ Thai) — every tool the method
 composes with, what each buys, and where each fails.

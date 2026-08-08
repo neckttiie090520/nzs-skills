@@ -5,9 +5,11 @@
 ## Context
 
 The set began as 21 flat skills. Three adversarial reviews independently found
-the same defect: four descriptions (`method-brief`, `method-greenlight`,
-`method-longlist`, `method-fieldwork`) all fire on *"should we build X"*. The model
-cannot choose between them mechanically, so it chooses arbitrarily.
+the same defect: four descriptions (`method-pm`, `method-decide`,
+`method-ideate`, `method-discovery` — later renamed `method-scope`,
+`method-greenlight`, `method-longlist`, `method-fieldwork`) all fire on
+*"should we build X"*. The model cannot choose between them mechanically, so
+it chooses arbitrarily.
 
 ## Decision
 

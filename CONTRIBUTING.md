@@ -34,7 +34,7 @@ A user-invoked skill may call a discipline. It never calls another user-invoked
 skill — that rule is what keeps triggers unambiguous, and it is the reason the
 `decide / pm / ideate / discovery` collision stopped mattering.
 
-A new `nzs-` skill needs a row in `nzs-compass` and a file in `commands/`. The
+A new `nzs-` skill needs a row in `nzs-go` and a file in `commands/`. The
 validator enforces both, because an entry point nothing routes to is one nobody
 will ever reach — which is a defect this repo shipped once already.
 

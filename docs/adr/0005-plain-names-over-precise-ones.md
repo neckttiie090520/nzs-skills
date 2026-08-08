@@ -28,22 +28,23 @@ or inconsistent with what the skill actually does.
 ## Decision
 
 Rename eleven skills to plain verbs and nouns; leave the twenty that were
-already legible.
+already legible. (Names below are what each became **at this ADR's decision**
+— several were renamed again in later passes; ADR 0007 has the current names.)
 
-| was | now | why |
+| was | became (1.2.0) | why |
 |---|---|---|
-| `method-se` | `method-craft` | "se" is an initialism only insiders expand |
-| `method-doctrine` | `method-rulebook` | it is about evidence; "doctrine" describes its tone, not its job |
-| `method-robust` | `method-stress-test` | a verb, and the verb people already use |
-| `method-pm` | `method-brief` | "pm" is a job title, not a task |
-| `method-register` | `method-logbook` | "register" reads as a verb meaning sign-up |
-| `method-economics` | `method-tab` | the question people actually ask |
-| `method-visual` | `method-sketch` | it covers layout and diagrams, not only visuals |
-| `method-ideate` | `method-longlist` | "ideate" is consultant vocabulary |
-| `method-appsec` | `method-trapdoor` | initialism |
-| `method-aisec` | `method-puppeteer` | initialism |
-| `ask-nzs` | `nzs-compass` | "start" says what to type first; "ask-nzs" required knowing the brand |
-| `method` | `method-conductor` | a bare `method` beside thirty `method-*` reads as a typo |
+| `method-se` | `method-code` | "se" is an initialism only insiders expand |
+| `method-doctrine` | `method-evidence` | it is about evidence; "doctrine" describes its tone, not its job |
+| `method-robust` | `method-harden` | a verb, and the verb people already use |
+| `method-pm` | `method-scope` | "pm" is a job title, not a task |
+| `method-register` | `method-record` | "register" reads as a verb meaning sign-up |
+| `method-economics` | `method-cost` | the question people actually ask |
+| `method-visual` | `method-design` | it covers layout and diagrams, not only visuals |
+| `method-ideate` | `method-ideas` | "ideate" is consultant vocabulary |
+| `method-appsec` | `method-web-security` | initialism |
+| `method-aisec` | `method-ai-security` | initialism |
+| `ask-nzs` | `nzs-start` | "start" says what to type first; "ask-nzs" required knowing the brand |
+| `method` | `method-run` | a bare `method` beside thirty `method-*` reads as a typo |
 
 Timing is the argument. The repo was one day old with no dependents; the same
 rename in a month breaks everyone who installed it.
@@ -52,9 +53,10 @@ rename in a month breaks everyone who installed it.
 
 Twelve directory moves and 126 reference rewrites across 34 files, done with a
 lookahead-guarded script because a naive replace of `method-se` also consumes
-the first nine characters of `method-vault` and `method-lockpick`.
+the first nine characters of `method-secrets` and `method-security` — the
+names those two skills carried at the time.
 
-Two names got *longer* (`method-trapdoor`, `method-puppeteer`). That is
+Two names got *longer* (`method-web-security`, `method-ai-security`). That is
 the deliberate trade: an initialism is shorter to type and slower to understand,
 and these are read far more often than typed.
 
@@ -64,7 +66,7 @@ and these are read far more often than typed.
   a beginner's page whose table is full of initialisms is not a beginner's page.
 - The validator gained two fixes the rename exposed: it required the router to
   route to itself, and its cross-reference pattern was `[a-z]+`, which matched
-  **nothing** for two-word names — so every reference to `method-trapdoor`
+  **nothing** for two-word names — so every reference to `method-web-security`
   was silently unchecked. A guard that quietly stops covering part of its
   surface is worse than one that fails loudly.
 - ADR 0002 stands: prefix churn for its own sake is still refused. This ADR is

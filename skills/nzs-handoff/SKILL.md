@@ -1,9 +1,9 @@
 ---
-name: nzs-baton
+name: nzs-handoff
 description: Compacts a long session into a handoff the next agent can actually resume from — what was decided and why, what is done and proven, what is in flight, what was tried and refuted, and the exact next action. Written for someone with none of your context. Use when a session is ending or getting long, before a compaction, or when the user says handoff / ส่งงาน / สรุปงาน / write this up for the next session / I'm out of context.
 ---
 
-# nzs-baton
+# nzs-handoff
 
 The next agent has none of your context and will not read your transcript. What
 survives is this file. Write for someone competent who was not here.
