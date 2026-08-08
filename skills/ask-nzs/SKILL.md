@@ -23,10 +23,46 @@ sequence.
 | one broken thing, "why is X doing Y" | diagnose | `method-debug` |
 | "ship", "deploy", "push" | ship | `method-ship` |
 | "how do users", "is this real" | discover | `method-discovery` |
+| vague want, "something like…", no clear scope | elicit | `nzs-grill` |
+| a decision that needs an argument, not a checklist | challenge | `nzs-panel` |
 
 If the request is a reference plus a build ("make our page like theirs"),
 acquisition runs FIRST and its output is what planning may cite. Never plan
 from a raw reference.
+
+**When the job is underspecified, `nzs-grill` comes before everything.** A stack
+built on a request nobody has pinned down is a stack that will be rebuilt. Grill
+ends in an artifact — a spec, an assumption map, extracted rules — and that
+artifact is what the rest of the stack consumes.
+
+**`nzs-panel` is not a review round.** `method-review` rotates disciplines over a
+diff; the panel casts people with interests, and it earns its place when the open
+question is *whether this should exist or who it is for* — not whether the code
+is correct.
+
+## 1b. The lifecycle skills — never in the stack, sometimes the answer
+
+Three skills serve the session rather than the job. They are not stack steps, so
+they never appear in an ordered list — but if the request is one of these, say so
+and route there instead of classifying it as work:
+
+| the request carries | route to |
+|---|---|
+| "set this up", ติดตั้ง, a fresh workspace or machine | `nzs-setup` |
+| "hand this over", running out of context, ending a session | `nzs-handoff` |
+| "remember this", จำไว้, or the user just corrected you | `nzs-learn` |
+
+The last one also fires unprompted: **a correction from the user is the highest-value
+signal in the session**, and routing it to `nzs-learn` costs one step and saves the
+same mistake twice.
+
+**Keeping these tables honest.** Most `method-*` skills correctly have no row — they
+are disciplines, and they enter in §2 when the stack is named, not from a bare
+request. The rows exist only for **entry points**: what a job can *start* at. So the
+failure to watch for is narrow and specific — a new user-invoked skill that nothing
+here can reach. Before answering, check the `nzs-*` skills in the available-skills
+listing against the two tables above. One that appears in neither is unreachable
+from any request, and that is worth saying out loud rather than routing around.
 
 ## 2. Name the stack
 

@@ -25,9 +25,21 @@ mkdir -p .claude/skills
 cp -r <path-to-nzs-skills>/skills/* .claude/skills/
 ```
 
-**Check:** `ls .claude/skills | grep -c '^\(method\|nzs\|ask-nzs\)'` — expect 26.
+**Check:** the destination holds every skill the source ships — compare the two
+directories, never a number written here:
+
+```bash
+diff <(ls <path-to-nzs-skills>/skills) <(ls .claude/skills | grep '^\(method\|nzs\|ask-nzs\)')
+```
+
+Empty output is the pass. A literal count in this file would be wrong the day
+the set grows, and an install check that goes red on a correct install is one
+the user learns to ignore.
+
 Then confirm the harness registered them: they appear in the available-skills
-listing. If a skill does not appear, its frontmatter did not parse — say which.
+listing. Copying a file and loading it are different events — a skill whose
+frontmatter does not parse copies fine and never appears. If one is missing from
+the listing, say which.
 
 ## 2. codegraph — a symbol graph so you stop grepping
 
