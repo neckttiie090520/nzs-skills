@@ -1,5 +1,5 @@
 ---
-description: Adversarial role-play by people with interests, not disciplines — an outsider with decla
+description: Adversarial role-play: a biased outsider, an opinionated CTO, and a senior who corrects both.
 ---
 
 Invoke the `nzs-panel` skill and follow it exactly. Arguments: $ARGUMENTS

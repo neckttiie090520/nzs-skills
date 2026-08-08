@@ -1,0 +1,23 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # No dependencies, no install step. The validator is one file of stdlib
+      # Node — a check that needs a supply chain to run is a check that will be
+      # skipped the first time the supply chain breaks.
+      - name: Validate the skill set
+        run: node scripts/validate.mjs --verbose

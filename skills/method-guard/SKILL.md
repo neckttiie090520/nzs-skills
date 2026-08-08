@@ -188,3 +188,16 @@ Guard path; the rule in one line; the recurrence evidence (the two occurrences,
 by commit or file); the narrowing measurement (flags before / flags after); the
 mutation transcript (clean 0 → mutated 1 with its message → restored 0); the
 suite command it is wired into; and its known blindness.
+
+## Refuses
+
+- **To wire in a guard that has not been seen failing.** The mutation transcript
+  — clean, mutated, restored — is what makes a guard a guard rather than a file
+  that runs.
+- **To write a guard on the first occurrence.** One bug is an incident; the
+  second is a class, and only a class earns permanent enforcement.
+- **To ship a guard whose failure message does not say what to do.** A red build
+  that leaves the reader guessing gets disabled — and then the class is
+  unguarded *and* invisible.
+- **To hide a guard's blindness.** Every guard names what it cannot catch, so
+  nobody mistakes its green for a broader guarantee than it makes.

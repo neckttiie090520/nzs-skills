@@ -2,6 +2,9 @@
 
 A working method, as executable skills for [Claude Code](https://claude.com/claude-code).
 
+[![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
+[![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
 Not a prompt collection. These were extracted from **279 commits and 106
 instructions** of one real project, then attacked by adversarial review until
 the reviews stopped finding things that mattered — including the reviews that
@@ -14,8 +17,17 @@ medium where the claim is true.**
 
 ## Install
 
+As a plugin, which keeps it updatable:
+
+```
+/plugin marketplace add neckttiie090520/nzs-skills
+/plugin install nzs-skills@nzs-skills
+```
+
+Or copy the files, if you would rather read them first — and you should:
+
 ```bash
-git clone https://github.com/<you>/nzs-skills.git
+git clone https://github.com/neckttiie090520/nzs-skills.git
 cp -r nzs-skills/skills/* ~/.claude/skills/        # global
 # or, per project:
 cp -r nzs-skills/skills/* .claude/skills/
@@ -117,10 +129,28 @@ point has already broken its first rule.
 ```
 skills/           one directory each, name matching its frontmatter
 commands/         one slash command per entry point
-.claude-plugin/   plugin manifest
+scripts/          validate.mjs — the repo's guard on itself
+.claude-plugin/   plugin + marketplace manifests
+.github/          CI, which is that validator and nothing else
 docs/adr/         the decisions, with what they cost
 CONTEXT.md        the shared language every skill assumes
 ```
+
+## The repo holds itself to the method
+
+A set that preaches executable guards and enforces nothing would be a
+description of a discipline rather than the discipline. So:
+
+```bash
+node scripts/validate.mjs --verbose
+```
+
+No dependencies. It checks the frontmatter contract, that every cross-reference
+resolves, that every entry point is reachable from the router and has a command,
+that the README covers the set, that no credential-shaped string is committed,
+and that **no count is written into prose** — each because that exact defect
+shipped here first. Every check has been mutation-tested: broken deliberately,
+seen red, restored, seen green.
 
 ## Credit
 
@@ -132,3 +162,4 @@ Adopted here as rules with reasons rather than as copies — which is what
 ## Licence
 
 MIT.
+

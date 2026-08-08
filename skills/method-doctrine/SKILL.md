@@ -106,3 +106,16 @@ answer yes with the command in hand, you have not verified — you have narrated
   commit body that may not assert a fix `method-verify` has not settled.
 - `method-review` enforces law 4: every finding is fix-now, record-with-price, or
   withdrawn — never silently dropped.
+
+## Refuses
+
+- **To let a claim through without its medium.** "Done", "fixed" or "passing"
+  with no command, query or measurement behind it is narration, and this gate
+  exists to catch it before anyone else has to.
+- **To count a check that did not run as a pass.** A skip is reported loudly,
+  with its reason.
+- **To raise a ratchet without a written reason in the diff**, or to state a
+  bound that rounds down. A flattering bound is worse than none, because it
+  will be trusted.
+- **To drop a review finding silently.** Fix it, price it, or withdraw it with
+  the reason — those are the only three exits.

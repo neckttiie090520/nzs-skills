@@ -1,0 +1,11 @@
+# Skills are text and are compared byte-for-byte by tooling on both sides of a
+# checkout. Without this, a Windows clone rewrites every file to CRLF and any
+# guard that compares content reports identical files as different — which has
+# already happened here twice, once to check-plugin-sync and once to the
+# frontmatter parser in scripts/validate.mjs.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
