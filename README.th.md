@@ -9,6 +9,10 @@
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
+> **เพิ่งมาใหม่ หรือเป็นสาย vibecode มากกว่าสายเขียนโค้ดทั้งวัน?**
+> อ่าน **[เริ่มตรงนี้](docs/START-HERE.th.md)** แทนหน้านี้ สิบห้านาที ไม่มีศัพท์เทคนิค
+> แล้วคุณจะได้ใช้มันจริง
+
 ไม่ใช่กองพรอมต์ ทั้งหมดนี้สกัดมาจาก **279 commit และคำสั่ง 106 ครั้ง** ของโปรเจกต์จริง
 หนึ่งโปรเจกต์ แล้วโดนรีวิวแบบปรปักษ์ซัดซ้ำจนรีวิวหาเรื่องสำคัญไม่เจออีก — รวมถึงรอบที่
 รีวิวเจอข้อบกพร่องใน skill พวกนี้เอง
@@ -43,7 +47,7 @@ cp -r nzs-skills/skills/* .claude/skills/
 จากนั้นในโปรเจกต์ไหนก็ได้:
 
 ```
-/ask-nzs อยากทำ rate limiting ให้ public API
+/nzs-start อยากทำ rate limiting ให้ public API
 ```
 
 รันครั้งแรก `method-onboard` จะเขียน `.method/config.yml` ให้ ทุกอย่างที่ขึ้นกับโปรเจกต์อยู่ใน
@@ -58,7 +62,7 @@ skill ไหนในรีโปนี้ระบุชื่อ framework, �
 
 | skill | ทำอะไร |
 |---|---|
-| **`ask-nzs`** | รับงานมา แล้วตอบเป็น *stack* ว่าจะใช้ skill ไหนเรียงยังไง จบงานเมื่อไหร่ |
+| **`nzs-start`** | รับงานมา แล้วตอบเป็น *stack* ว่าจะใช้ skill ไหนเรียงยังไง จบงานเมื่อไหร่ |
 | **`nzs-goal`** | เขียนพรอมต์ `/goal` กับไฟล์แผนที่ loop อ่านซ้ำทุกรอบ ออกแบบมาให้ "จบได้" |
 | **`nzs-grill`** | ซักถามจนทุกแขนงของงานชัด แล้วปิดท้ายด้วยชิ้นงานจริง ไม่ใช่บทสรุปการคุย |
 | **`nzs-panel`** | คนนอกที่มี bias ประกาศไว้ชัด, CTO เรื่องมาก, และ senior ที่มาตบทั้งคู่ |
@@ -70,12 +74,12 @@ skill ไหนในรีโปนี้ระบุชื่อ framework, �
 
 | ขั้น | skills |
 |---|---|
-| หลักการ | `method-doctrine` · `method-onboard` |
+| หลักการ | `method-evidence` · `method-onboard` |
 | เก็บข้อมูล | `method-research` · `method-clone` · `method-extract` |
-| ตัดสินใจ | `method-decide` · `method-economics` · `method-register` · `method-postmortem` · `method-pm` · `method-discovery` · `method-ideate` |
-| สร้าง | `method-plan` · `method-se` · `method-guard` · `method-robust` |
-| ตรวจ | `method-review` · `method-debug` · `method-verify` · `method-visual` |
-| ความปลอดภัย | `method-security` · `method-threat` · `method-secrets` · `method-appsec` · `method-aisec` |
+| ตัดสินใจ | `method-decide` · `method-cost` · `method-record` · `method-postmortem` · `method-scope` · `method-discovery` · `method-ideas` |
+| สร้าง | `method-plan` · `method-code` · `method-guard` · `method-harden` |
+| ตรวจ | `method-review` · `method-debug` · `method-verify` · `method-design` |
+| ความปลอดภัย | `method-security` · `method-threat` · `method-secrets` · `method-web-security` · `method-ai-security` |
 | ส่งขึ้นจริง | `method-ship` · `method` (ตัวคุมรวม) |
 
 skill ชั้นบนเรียก discipline ได้ แต่ **ห้ามเรียก skill ชั้นบนด้วยกันเอง** — กฎข้อนี้คือสิ่งที่ทำให้
@@ -111,7 +115,7 @@ skill ชั้นบนเรียก discipline ได้ แต่ **ห้�
   รีวิวงานฝีมือผ่านหมดทุกรอบ และไม่มีรอบไหนจับได้ เพราะมันไม่ใช่คำถามเรื่องงานฝีมือ
 - การแก้ไฟล์สามครั้ง **หาคำที่จะแก้ไม่เจอเงียบๆ** แล้วรายงานว่าแก้เสร็จแล้ว
 
-ข้อสุดท้ายคือเหตุผลที่ `method-doctrine` มีอยู่ และเป็นเหตุผลที่ประตูตรวจของมันเรียกชื่อ
+ข้อสุดท้ายคือเหตุผลที่ `method-evidence` มีอยู่ และเป็นเหตุผลที่ประตูตรวจของมันเรียกชื่อ
 การหลอกตัวเองพวกนี้ตามรูปแบบของมันตรงๆ
 
 ---

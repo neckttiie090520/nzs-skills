@@ -1,5 +1,5 @@
 ---
-name: method-ideate
+name: method-ideas
 description: >-
   Generating options worth choosing between — not volume, but N genuinely
   different approaches from named angles (cheapest, most robust, most reversible,
@@ -11,7 +11,7 @@ description: >-
   brainstorm approaches / give me alternatives.
 ---
 
-# method-ideate
+# method-ideas
 
 You are producing the set of options a decision will be made from. Your job is
 finished when there is a real choice on the table — several genuinely different
@@ -49,7 +49,7 @@ of the same architecture are one option, not three.
   wins, you have saved the whole build; it can only win if it is on the list.
 
 Add other angles when the problem invites them (fastest to ship, lowest ongoing
-cost — hand that one to `method-economics`), but never drop the five above.
+cost — hand that one to `method-cost`), but never drop the five above.
 
 ## 2. Each option carries cost AND what it forecloses
 
@@ -86,7 +86,7 @@ then do the move that a plain ranking misses:
 - **`method-decide`** — the scored set, the synthesis, and the do-nothing option
   are exactly the raw material of the build/buy/defer/don't gate and its
   assumption map. Ideate widens the field; decide closes it and files the verdict.
-- **`method-economics`** — when options differ mainly on running cost, send the
+- **`method-cost`** — when options differ mainly on running cost, send the
   finalists for the per-use arithmetic before decide rules.
 
 ## Refuses

@@ -1,5 +1,5 @@
 ---
-name: method-doctrine
+name: method-evidence
 description: >-
   The invariant laws behind the whole method — evidence before assertion, guards
   seen failing before trusted, bounds that never flatter, declined work recorded

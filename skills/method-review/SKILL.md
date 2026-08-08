@@ -40,8 +40,8 @@ change can actually expose, in the order they will run:
 
 **Every role names the discipline it wears.** A posture with no method behind it
 reviews by taste. When a round selects `security`, read `method-security` and
-follow it — adding `method-appsec` where the change is web-facing, and
-`method-aisec` where it prompts a model or renders one's output. This table says
+follow it — adding `method-web-security` where the change is web-facing, and
+`method-ai-security` where it prompts a model or renders one's output. This table says
 *which* posture; those skills say *what it does*.
 
 **No role repeats until the roster is exhausted.** If the roster runs out before

@@ -1,9 +1,9 @@
 ---
-name: method-se
+name: method-code
 description: Software-engineering judgement for the change itself — find the seam it belongs in, make the smallest change that solves the real problem, name it honestly, respect the boundaries, and know when to refactor versus leave it. Enforces the standing instruction "build the simplest working solution first, don't over-engineer" against the model's own pull toward elaboration. Use before writing implementation code, when choosing where something lives, when tempted to add an abstraction, a layer, a config option, or a rewrite; when the user says ง่ายๆ / อย่าซับซ้อน / simplest thing that works / don't over-engineer / where should this go / should I refactor this.
 ---
 
-# method-se
+# method-code
 
 The owner's standing instruction, verbatim: **"Build the simplest working
 solution first. Don't over-engineer."** You are not naturally inclined to obey

@@ -95,10 +95,10 @@ threshold to point at — it just accretes.
 
 ## 4. The verdict
 
-One of four, and it goes to `method-register` (never left in conversation):
+One of four, and it goes to `method-record` (never left in conversation):
 
 - **build** — assumptions either evidenced or cheap-to-test-and-tested; success
-  is an observable; kill criteria set. Hand to `method-economics` for the unit
+  is an observable; kill criteria set. Hand to `method-cost` for the unit
   cost, then `method-plan`.
 - **buy** — an existing thing covers it below the cost of building; name it and
   what it does not cover.

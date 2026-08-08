@@ -104,7 +104,11 @@ for (const [dir, { fm }] of skills) {
 
 // ------------------------------------------------- 3. no dangling cross-links
 
-const NAMED = /`(method(?:-[a-z]+)?|nzs-[a-z]+|ask-nzs)`/g;
+// [a-z-]+ , not [a-z]+ — two-word skills like `method-web-security` matched
+// NOTHING under the old pattern, so every cross-reference to them was silently
+// unchecked. A guard that quietly stops covering part of its surface is worse
+// than one that fails loudly.
+const NAMED = /`(method(?:-[a-z-]+)?|nzs-[a-z-]+)`/g;
 let linkCount = 0;
 for (const [dir, { text }] of skills) {
   for (const [, name] of text.matchAll(NAMED)) {
@@ -117,18 +121,21 @@ ran("cross-references", linkCount);
 
 // ------------------------------- 4. every entry point is reachable and wired
 //
-// ask-nzs once named exactly one of the six nzs-* skills. Five entry points
+// nzs-start once named exactly one of the six nzs-* skills. Five entry points
 // existed and no request could reach them.
 
-const entryPoints = [...skills.keys()].filter((n) => n.startsWith("nzs-"));
-const router = skills.get("ask-nzs");
-if (!router) fail("the router exists", "skills/ask-nzs is missing");
+const ROUTER = "nzs-start";
+// The router is an entry point too, but it cannot be required to route to
+// itself — you reach it by typing its name.
+const entryPoints = [...skills.keys()].filter((n) => n.startsWith("nzs-") && n !== ROUTER);
+const router = skills.get(ROUTER);
+if (!router) fail("the router exists", `skills/${ROUTER} is missing`);
 else
   for (const name of entryPoints)
     if (!router.text.includes(`\`${name}\``))
-      fail("entry point is reachable from the router", `${name} — no row in ask-nzs, so no request routes to it`);
+      fail("entry point is reachable from the router", `${name} — no row in ${ROUTER}, so no request routes to it`);
 
-for (const name of entryPoints.concat("ask-nzs")) {
+for (const name of entryPoints.concat(ROUTER)) {
   const cmd = join("commands", `${name}.md`);
   if (!existsSync(cmd)) fail("entry point has a slash command", `${name} — no commands/${name}.md`);
 }
@@ -177,7 +184,9 @@ const PROSE = [
   "CONTRIBUTING.md",
   "SECURITY.md",
   "docs/ECOSYSTEM.md",
+  "docs/START-HERE.md",
   "docs/ECOSYSTEM.th.md",
+  "docs/START-HERE.th.md",
   ...[...skills.values()].map((s) => s.path),
 ];
 const COUNT_IN_PROSE = /\b(\d{2,})\s+skills\b|\bthe\s+(two|three|four|five|six|seven|eight|nine|ten)\s+(entry points|skills|commands)\b/gi;

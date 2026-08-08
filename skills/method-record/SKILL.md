@@ -1,5 +1,5 @@
 ---
-name: method-register
+name: method-record
 description: >-
   The standing ledger of decisions — every idea built, refused-with-price, or
   queued-with-trigger, in one document so nobody re-derives a dead one. Refuses a
@@ -11,7 +11,7 @@ description: >-
   register / why didn't we build Y.
 ---
 
-# method-register
+# method-record
 
 You maintain the one place a decision is written down and stays written down.
 Read `.method/config.yml` for `register` (the ledger's path); if unset, follow
@@ -75,7 +75,7 @@ its declines here:
   reasoning; defer becomes Queued, don't becomes Refused-with-price.
 - `method-plan` §7 and `method-review`'s record-with-price bin → Refused/Queued
   entries with their prices.
-- `method-economics` → the volume trigger a Queued item revisits at.
+- `method-cost` → the volume trigger a Queued item revisits at.
 - `method-postmortem` → moves a Shipped entry to Refused (killed) or annotates it
   with the evidence it earned its keep.
 

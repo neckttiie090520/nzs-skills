@@ -1,9 +1,9 @@
 ---
-name: method-robust
+name: method-harden
 description: Makes a feature survive contact with reality — interrupted and abandoned journeys, two tabs racing the same row, step 2 failing after step 1 succeeded, behaviour AT the limit and one past it, nested timeouts, hostile input, and one broken piece taking the whole page down. Runs as checklists that produce findings with evidence, not reassurance. Also audits every error message for the three things they keep missing: what happened, whether it cost anything, what to do next. Use before shipping anything with money, state, or multiple steps; when the user says พัง / ทน / edge case / error state / what if / race condition / what happens when it fails.
 ---
 
-# method-robust
+# method-harden
 
 You are trying to break this, on purpose, before a user does it by accident. Each
 section below is a checklist that must produce **findings with evidence** — a
@@ -79,7 +79,7 @@ budget ceiling:
 - [ ] Is the limit enforced on the **server**? A cap advertised in the UI and
       enforced nowhere is a warranty the code cannot honour.
 - [ ] Does the number in the message come from the same constant as the check?
-      If it is typed twice, they will drift (hand to `method-se`).
+      If it is typed twice, they will drift (hand to `method-code`).
 - [ ] Far past it — 100x. Does it degrade or fall over?
 
 ## 5. Timeouts and their nesting

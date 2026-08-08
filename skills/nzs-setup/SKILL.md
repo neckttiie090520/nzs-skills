@@ -29,7 +29,7 @@ cp -r <path-to-nzs-skills>/skills/* .claude/skills/
 directories, never a number written here:
 
 ```bash
-diff <(ls <path-to-nzs-skills>/skills) <(ls .claude/skills | grep '^\(method\|nzs\|ask-nzs\)')
+diff <(ls <path-to-nzs-skills>/skills) <(ls .claude/skills | grep '^\(method\|nzs\|nzs-start\)')
 ```
 
 Empty output is the pass. A literal count in this file would be wrong the day

@@ -7,7 +7,7 @@ something that can actually read a database, drive a browser, index a codebase,
 or remember last week. This page is the other half: every tool this method
 composes with, what it is, what it buys, how to use it, and where it fails.
 
-Read it once. After that, `ask-nzs` will name the stack for you.
+Read it once. After that, `nzs-start` will name the stack for you.
 
 ---
 
@@ -28,7 +28,7 @@ would be worthless the day you changed drivers. Instead, every project writes
 `.method/config.yml` once (via `method-onboard`) and every skill reads *that*.
 
 ```
-        you ── /ask-nzs ──▶ a stack of skills          ← the method (this repo)
+        you ── /nzs-start ──▶ a stack of skills          ← the method (this repo)
                               │
                               ▼
                     .method/config.yml                  ← what THIS project uses
@@ -121,8 +121,8 @@ accounts. Discover what is available with `/v1/models/image`, `/v1/models`, and
 friends; use the returned `id` as the `model`.
 
 **What it buys.** Provider independence and a single key. It is what
-`method-visual` reaches for when a repo or a product needs generated imagery,
-and what `method-economics` can point a ledger at.
+`method-design` reaches for when a repo or a product needs generated imagery,
+and what `method-cost` can point a ledger at.
 
 ```bash
 curl -X POST "$NINEROUTER_URL/v1/images/generations?response_format=binary" \
@@ -132,7 +132,7 @@ curl -X POST "$NINEROUTER_URL/v1/images/generations?response_format=binary" \
 
 **Two traps, both hit while making this repo's artwork.** A model can return
 **429 quota exceeded** while its siblings work — probe cheaply, then fall back,
-which is exactly `method-robust`'s degradation rule. And **`size` is a hint**:
+which is exactly `method-harden`'s degradation rule. And **`size` is a hint**:
 two models ignored it and returned portrait. If aspect ratio matters, say it in
 the prompt as well, then *look at the result* — the only medium in which an
 image claim is settled is your own eyes.
@@ -205,7 +205,7 @@ because a repeated role finds the same class again and calls it progress.
 **Where they meet this repo.** `method-review` selects the roster and re-verifies
 the *previous* round's fixes before hunting new defects — because this project
 recorded three separate rounds catching a fix that had been reported as done and
-never landed. `method-security`, `method-appsec` and `method-aisec` are the
+never landed. `method-security`, `method-web-security` and `method-ai-security` are the
 disciplines the `security` role reads.
 
 **debug-mantra deserves its own note**, because it is the discipline
@@ -238,7 +238,7 @@ commands must answer.
 
 Establishes that process skills run *before* implementation skills: brainstorm
 before planning, systematic debugging before domain fixes. Compatible with this
-set by design — `ask-nzs` occupies the same slot for this method's own skills.
+set by design — `nzs-start` occupies the same slot for this method's own skills.
 
 ### fable modes — model tiering when spawning
 
@@ -264,7 +264,7 @@ Before building anything sizeable. One outsider pass asking whether it should
 exist, then the decision recorded with its assumptions. Cheapest possible way to
 avoid building the wrong thing.
 
-**2. Reference-first build** — `method-research` → `method-extract` → `method-plan` → `method-se`
+**2. Reference-first build** — `method-research` → `method-extract` → `method-plan` → `method-code`
 Acquisition **always** runs before planning. Never plan from a raw reference:
 extract the rules first, then plan against the rules. `method-clone` replaces the
 first two when the reference is a live site.
@@ -297,19 +297,19 @@ left to record.
 **"Make our page look like theirs."**
 `method-clone` (capture the reference, with Playwright measuring real computed
 values) → `method-extract` (rules with reasons, not screenshots) → `method-plan`
-→ build → `method-visual` + `impeccable` → `method-review` with `design-jury`.
+→ build → `method-design` + `impeccable` → `method-review` with `design-jury`.
 The measurement step is non-negotiable: an eyeballed "about 510px" was wrong by
 73px, and only a measurement said so.
 
 **"Is this feature worth building?"**
 `nzs-grill` if the want is vague → `method-discovery` (is the assumption true?)
-→ `method-decide` → `method-economics` if it costs money per use. A `decide`
+→ `method-decide` → `method-cost` if it costs money per use. A `decide`
 that says *don't build* is a success, and is recorded with its price so nobody
 re-derives it.
 
 **"Review this PR properly."**
 `method-review` with a roster picked from the change type. An endpoint gets
-`security` (reading `method-security` + `method-appsec`), `edge-case`, then
+`security` (reading `method-security` + `method-web-security`), `edge-case`, then
 `bug-hunter`. Findings triage into fix-now / record-with-price / withdrawn —
 never silently dropped.
 
@@ -319,8 +319,8 @@ Then knobs, then instrumentation. Keep the ledger; a new hypothesis must hold
 for **every** prior observation, not just the latest.
 
 **"We're adding AI to this product."**
-`method-threat` first → `method-aisec` for the injection and output-sink
-questions → `method-economics` for the ceiling → `method-guard` for the spend
+`method-threat` first → `method-ai-security` for the injection and output-sink
+questions → `method-cost` for the ceiling → `method-guard` for the spend
 bound. Model output is untrusted input, and the sink decides what it can do.
 
 **"Set up a new machine / workspace."**
@@ -351,7 +351,7 @@ itself.*
 **A repair pass that fired every single time.** A style guard's regexes were
 dead in the same way, so a repair generation ran on **every** request, billed
 twice, and discarded the result. Nobody saw it because the output looked fine.
-*Rule: `method-economics` reads the ledger, not the intention.*
+*Rule: `method-cost` reads the ledger, not the intention.*
 
 **A guard that failed its own birth test.** A newly written sync guard compared
 bytes, so on a Windows checkout `git checkout --` restored CRLF and two
@@ -360,7 +360,7 @@ test. *Rule: `method-guard` — a guard is not trusted until it has been seen
 failing on a real mutation and passing when restored.* The same trap then hit
 this repo's validator, which is why `.gitattributes` pins `eol=lf`.
 
-**The router that could not reach its own entry points.** `ask-nzs` — the skill
+**The router that could not reach its own entry points.** `nzs-start` — the skill
 whose entire job is finding the right skill — named exactly one of six
 user-invoked skills. Five were unreachable from any request. Three adversarial
 review rounds missed it because every round *used* the router and none asked

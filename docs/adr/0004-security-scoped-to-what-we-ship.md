@@ -22,7 +22,7 @@ The prompting case was
 ## Decision
 
 Write five disciplines — `method-security`, `method-threat`, `method-secrets`,
-`method-appsec`, `method-aisec` — scoped to the systems this method is used on.
+`method-web-security`, `method-ai-security` — scoped to the systems this method is used on.
 Do **not** vendor the domain library.
 
 Two of its conventions are adopted: a verification section per skill, and
@@ -50,10 +50,10 @@ nobody re-derives the comparison.
 
 - `method-review` now names the discipline each role wears, so selecting
   `security` reads a method rather than improvising one.
-- `ask-nzs` routes threat modelling before building anything that handles
+- `nzs-start` routes threat modelling before building anything that handles
   credentials, money, other people's data, or external input.
 - `method-secrets` makes the project's existing practice explicit and
   enforceable: exposure is a rotation event, never a cleanup event.
-- `method-aisec` records, with its reasoning, a decision the source project had
+- `method-ai-security` records, with its reasoning, a decision the source project had
   already made correctly and never written down — model output is rendered as
   elements, never through a raw-HTML sink.

@@ -1,5 +1,5 @@
 ---
-name: method-appsec
+name: method-web-security
 description: >-
   The web-specific sweep — IDOR and broken object-level authorization, injection,
   SSRF, unsafe redirects, file upload, CSRF and cookie posture, security headers,

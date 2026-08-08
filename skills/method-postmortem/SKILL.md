@@ -20,7 +20,7 @@ You are answering, with data, the only question that ranks a shipped feature: *d
 it earn its keep?* Read `.method/config.yml` for `mediums` (where usage is
 observed), `cost.ledger` (the money record), `register` (the entry to update),
 and the feature's `method-decide` output (its assumption map and kill criteria).
-Apply `method-doctrine`: every claim here is settled from real data or downgraded
+Apply `method-evidence`: every claim here is settled from real data or downgraded
 to "attempted, unverified."
 
 ## The failure this prevents
@@ -61,7 +61,7 @@ is itself a finding.
   simplify"*).
 - **Cost.** What it actually cost to run, from `cost.ledger` — the measured
   actual, against the ceiling the feature was approved under. If the actual beat
-  the ceiling, that is a `method-economics` bug to file, not a rounding note.
+  the ceiling, that is a `method-cost` bug to file, not a rounding note.
 - **The gap between forecast and real.** The register caught its own tile summing
   *"62 calls counted with no line in the table"* — real ledger data disagreeing
   with the assumed model is the most valuable thing a postmortem finds. Reconcile
@@ -69,7 +69,7 @@ is itself a finding.
 
 ## 3. The verdict — evidence, or a recommendation
 
-One of two, and both go back to `method-register`:
+One of two, and both go back to `method-record`:
 
 - **Earned its keep** — the observable success criterion from decide is met, shown
   with the query and its output. The register entry stays Shipped, annotated with

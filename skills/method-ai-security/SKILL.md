@@ -1,5 +1,5 @@
 ---
-name: method-aisec
+name: method-ai-security
 description: >-
   Security for features that call a model — prompt injection from fetched or
   user-supplied content, model output treated as data rather than markup or
@@ -44,7 +44,7 @@ succeeds. Fix it structurally instead:
 
 ## 2. Where the output lands decides what it can do
 
-Model output is caller data, and `method-appsec`'s sink rules apply unchanged.
+Model output is caller data, and `method-web-security`'s sink rules apply unchanged.
 The sink is the whole question:
 
 - **Into HTML** — never a raw-HTML sink. Build **elements**, not markup strings:
@@ -80,7 +80,7 @@ context.
 
 A feature that spends money per request has an availability and budget failure
 mode that reads as normal traffic. Delegate the bound itself to
-`method-economics`; here, check that:
+`method-cost`; here, check that:
 
 - The expensive path is **behind auth and rate-limited per caller**, not just
   globally — a global cap turns one abuser into an outage for everyone.

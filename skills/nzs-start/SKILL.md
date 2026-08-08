@@ -1,9 +1,9 @@
 ---
-name: ask-nzs
+name: nzs-start
 description: The router for nzs-skills. Given a job, returns the skill STACK — which skills, in what order, and the loop that finishes the work with its exit condition stated as an observable. Use when you do not know which skill fits, when a job spans several stages, or when the user asks ใช้อันไหน / เริ่มยังไง / which skill / what's the plan / how do I approach this.
 ---
 
-# ask-nzs
+# nzs-start
 
 You return a plan, not a menu. One stack, ordered, with an exit condition
 anybody can check. A router that offers three options has decided nothing and

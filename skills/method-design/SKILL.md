@@ -1,9 +1,9 @@
 ---
-name: method-visual
+name: method-design
 description: Think in pixels and diagrams instead of prose. Two halves — REASONING, draw the surface before you build it (an ASCII box with the measures on it for layout, mermaid for flows and state), and VERIFYING, judge the rendered pixels and never the code (take the screenshot and READ it, measure getBoundingClientRect, sample colour through a 1x1 canvas rather than parsing a colour string, diff against the previous screenshot not against memory). Use when designing or changing any UI surface, before a layout decision, and whenever a visual claim is about to be made; when the user says วาดให้ดู / ดูรูป / diagram / sketch it / show me the layout / does it look right / screenshot it.
 ---
 
-# method-visual
+# method-design
 
 Prose is the wrong medium for a surface. A paragraph describing a layout can be
 read three ways and none of them is measurable; a box with numbers on it can be
@@ -50,7 +50,7 @@ Rules for the sketch:
   changes. A number on the sketch is a number you can later go and measure.
 - **Draw every state you intend to ship** — empty, loading, one item, many,
   error, at the cap. A layout that only exists in its happy state is one
-  drawing short (hand the states themselves to `method-robust`).
+  drawing short (hand the states themselves to `method-harden`).
 - **Draw the narrow width too** if the arrangement changes. "Responsive" without
   a second drawing is an intention.
 - **Keep the sketch.** Put it in the spec, or in the component's header comment

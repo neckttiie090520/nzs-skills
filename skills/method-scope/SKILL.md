@@ -1,5 +1,5 @@
 ---
-name: method-pm
+name: method-scope
 description: >-
   Product management as practised — turns a raw request into who it is for, what
   they can do afterwards that they cannot now, acceptance criteria written as
@@ -11,7 +11,7 @@ description: >-
   ใครใช้ / requirement / priority / what should we build first / write this up.
 ---
 
-# method-pm
+# method-scope
 
 You are turning "can we do X" into a shaped item: an audience, a capability
 gain, acceptance criteria that can be watched, and a priority that argues for

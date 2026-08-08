@@ -9,6 +9,10 @@ A working method, as executable skills for [Claude Code](https://claude.com/clau
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)
 [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
+> **New here, or you vibecode rather than write code all day?**
+> Read **[Start here](docs/START-HERE.md)** ([ภาษาไทย](docs/START-HERE.th.md))
+> instead of this page. Fifteen minutes, no jargon, and you will have used it.
+
 Not a prompt collection. These were extracted from **279 commits and 106
 instructions** of one real project, then attacked by adversarial review until
 the reviews stopped finding things that mattered — including the reviews that
@@ -40,7 +44,7 @@ cp -r nzs-skills/skills/* .claude/skills/
 Then, in any project:
 
 ```
-/ask-nzs I need to add rate limiting to the public API
+/nzs-start I need to add rate limiting to the public API
 ```
 
 The first run writes `.method/config.yml` via `method-onboard`. Everything
@@ -56,7 +60,7 @@ currency.**
 
 | skill | what it does |
 |---|---|
-| **`ask-nzs`** | returns the skill *stack* for a job, with an observable exit condition |
+| **`nzs-start`** | returns the skill *stack* for a job, with an observable exit condition |
 | **`nzs-goal`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
 | **`nzs-grill`** | interviews until every branch resolves, then ends in an artifact |
 | **`nzs-panel`** | outsider with declared bias, opinionated CTO, senior who corrects both |
@@ -68,12 +72,12 @@ currency.**
 
 | stage | skills |
 |---|---|
-| doctrine | `method-doctrine` · `method-onboard` |
+| doctrine | `method-evidence` · `method-onboard` |
 | acquire | `method-research` · `method-clone` · `method-extract` |
-| decide | `method-decide` · `method-economics` · `method-register` · `method-postmortem` · `method-pm` · `method-discovery` · `method-ideate` |
-| build | `method-plan` · `method-se` · `method-guard` · `method-robust` |
-| verify | `method-review` · `method-debug` · `method-verify` · `method-visual` |
-| secure | `method-security` · `method-threat` · `method-secrets` · `method-appsec` · `method-aisec` |
+| decide | `method-decide` · `method-cost` · `method-record` · `method-postmortem` · `method-scope` · `method-discovery` · `method-ideas` |
+| build | `method-plan` · `method-code` · `method-guard` · `method-harden` |
+| verify | `method-review` · `method-debug` · `method-verify` · `method-design` |
+| secure | `method-security` · `method-threat` · `method-secrets` · `method-web-security` · `method-ai-security` |
 | ship | `method-ship` · `method` (orchestrator) |
 
 A user-invoked skill may call a discipline. It never calls another user-invoked
@@ -110,7 +114,7 @@ Four things that happened in the source project, each of which became a rule:
   caught it, because it was not a craft question.
 - Three separate edits **silently matched nothing** and were reported as done.
 
-The last one is why `method-doctrine` exists, and why its gate names those exact
+The last one is why `method-evidence` exists, and why its gate names those exact
 self-deceptions by shape.
 
 ---

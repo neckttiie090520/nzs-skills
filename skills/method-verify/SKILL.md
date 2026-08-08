@@ -20,7 +20,7 @@ this project's `mediums` map and `verify` commands, then settle each claim in th
 medium where the claim is actually true. Reading the file back is the *floor*, not
 the ceiling — the diff shows your intention, not the fact.
 
-First apply `method-doctrine`'s anti-theatre gate to your own output. Then, for
+First apply `method-evidence`'s anti-theatre gate to your own output. Then, for
 every claim, do the medium-specific settlement below and record the actual output.
 
 ## Settle the claim in its medium

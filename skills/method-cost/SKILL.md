@@ -1,5 +1,5 @@
 ---
-name: method-economics
+name: method-cost
 description: >-
   The unit economics of a feature — cost per use, who pays, what the cap is, and
   at what volume the design stops working. Draws the ceiling-vs-forecast line: a
@@ -15,7 +15,7 @@ config that does not exist is how a model invents a ledger name, a production
 connection, or a verify command it has never seen.
 
 
-# method-economics
+# method-cost
 
 You are pricing one use of a feature and finding the volume at which its shape
 breaks. Read `.method/config.yml` for `cost` (currency, `ledger`, `ceiling_fn`)
@@ -92,7 +92,7 @@ does this cost, this cap, or this latency stop being acceptable?* The register's
 whole discipline is triggers on volume — *"a tool for an empty table is tuned
 against imagined data,"* and equally a tool priced for ten uses a month is a
 liability at ten thousand. Name the volume, name what breaks at it (cost line,
-cap starvation, latency, rate limit), and hand that number to `method-register`
+cap starvation, latency, rate limit), and hand that number to `method-record`
 as the feature's revisit trigger and to `method-decide`'s kill criteria.
 
 ## Refuses

@@ -64,7 +64,7 @@ A single verdict with:
 - the strongest surviving objection, and why it did not win
 - what would reverse the decision, stated as something observable
 
-File the verdict with `method-register`, so nobody re-derives it.
+File the verdict with `method-record`, so nobody re-derives it.
 
 ## What you refuse
 

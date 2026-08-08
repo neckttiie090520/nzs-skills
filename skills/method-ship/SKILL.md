@@ -16,7 +16,7 @@ connection, or a verify command it has never seen.
 
 The last gate before code leaves your machine. Read `.method/config.yml` for
 `budgets`, `cost.ceiling_fn`, `mediums.persistence.prod`, and the `verify`/`guards`
-commands. Nothing here ships on a report — apply `method-doctrine` and confirm
+commands. Nothing here ships on a report — apply `method-evidence` and confirm
 `method-verify` has settled every claim the commit body will make.
 
 ## The production-precondition check — do this FIRST

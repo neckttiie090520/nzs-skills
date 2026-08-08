@@ -13,7 +13,7 @@ description: >-
 
 You sequence the other method-* skills; you do not re-implement them. Read
 `.method/config.yml` — especially `models` (the tiers), `references`, and
-`handoff`. Every stage below cites `method-doctrine`; no "done" in this loop may be
+`handoff`. Every stage below cites `method-evidence`; no "done" in this loop may be
 narrated instead of shown.
 
 **If `.method/config.yml` does not exist, run `method-onboard` first.** Every skill
@@ -49,8 +49,8 @@ assumption map, names what is LOST by the simpler shape, and sets kill criteria.
 This is where the project's most expensive failure is caught for free: *seven
 commits of interface sophistication on a generator producing 13% of a target
 article* — the craft was real, the thing was not needed yet. A `build` verdict
-hands to `method-economics` (the unit cost, the cap, the volume it breaks at)
-and then to `method-plan`; every verdict is filed by `method-register` so no
+hands to `method-cost` (the unit cost, the cap, the volume it breaks at)
+and then to `method-plan`; every verdict is filed by `method-record` so no
 declined idea is silently dropped. **Skip the gate for a bounded edit** — decide-
 ceremony on a typo is the same disease as spec-ceremony on one.
 
@@ -90,7 +90,7 @@ Delegate each stage to the model tier the config names, by capability not brand.
    instrument the assumption map's deferred tests against real usage and ledger
    data, and return either evidence it earned its keep or a kill/simplify
    recommendation. It judges the feature by use, never by how well it was built,
-   and updates `method-register` with the outcome.
+   and updates `method-record` with the outcome.
 
 ## Handoff — after every milestone
 
@@ -119,12 +119,12 @@ names — a router that abandons its own skills.
 
 Wire them where they belong:
 
-- **Before Decide** — `method-pm` shapes a raw request into who it is for and
-  what they can do afterwards; `method-ideate` generates the options including
+- **Before Decide** — `method-scope` shapes a raw request into who it is for and
+  what they can do afterwards; `method-ideas` generates the options including
   do-nothing; `method-discovery` goes and finds out what is true when the
   answer is "nobody knows". All three hand into `method-decide`, which rules.
-- **Inside Build** — `method-se` before any implementation: find the seam, make
+- **Inside Build** — `method-code` before any implementation: find the seam, make
   the smallest change that solves the real problem, trace the blast radius.
-- **Inside Review and Verify** — `method-robust` for anything holding money,
-  state or more than one step; `method-visual` for any surface a person looks
+- **Inside Review and Verify** — `method-harden` for anything holding money,
+  state or more than one step; `method-design` for any surface a person looks
   at, both to sketch it before building and to judge the rendered pixels after.

@@ -86,7 +86,7 @@ inherits the dismissals and does not pay for them again.
   here is how threat modelling got its reputation.
 - **To list a threat with no control and no task.** That is a worry, not a model.
 - **To skip the cost row** on anything that calls a paid API. Spend is an
-  availability asset — delegate the bound to `method-economics`.
+  availability asset — delegate the bound to `method-cost`.
 
 ## Output
 
