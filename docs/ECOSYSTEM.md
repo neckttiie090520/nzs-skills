@@ -43,9 +43,21 @@ would be worthless the day you changed drivers. Instead, every project writes
    capability            memory + context        review engines
    playwright            engram, headroom        codex, bug-hunter,
    codegraph             CLAUDE.md               scrutinize, impeccable
-   context7              handoff.md              debug-mantra
+                      handoff.md              debug-mantra
    your db client
 ```
+
+---
+
+## What is on this page, and what is deliberately not
+
+Every tool below can be **installed and then proven working by a command**, which
+is what `nzs-setup` does. That is the entry requirement.
+
+Anything that needs a human to open a browser, create an account and paste a key
+back is excluded — not because it is bad, but because a setup step cannot verify
+it, and this method does not list what it cannot check. If you already run such a
+service, use it; it just is not part of the automated path.
 
 ---
 
@@ -104,45 +116,6 @@ answer for many repos.
 **The rule.** Never run `codegraph init` without asking — it indexes everything.
 If there is no `.codegraph/` directory, the project has not opted in; use Read
 and Grep and do not create one silently.
-
-### Context7 MCP — current library documentation
-
-**What it is.** Version-accurate docs for libraries, frameworks, SDKs and CLIs,
-fetched on demand.
-
-**What it buys.** Your training data has a cutoff; the framework does not.
-`method-research` and `method-plan` use it so a plan cites the API that exists
-today rather than the one you remember. Prefer it over web search for anything
-library-shaped.
-
-**When to skip it.** Business logic, refactors, and general programming
-questions. It answers "what is the API", not "what should I build".
-
-### 9Router — one OpenAI-compatible endpoint for many providers
-
-**What it is.** A local gateway exposing `/v1/...` for chat, images, TTS,
-embeddings, web search and vision, with automatic failover across provider
-accounts. Discover what is available with `/v1/models/image`, `/v1/models`, and
-friends; use the returned `id` as the `model`.
-
-**What it buys.** Provider independence and a single key. It is what
-`method-design` reaches for when a repo or a product needs generated imagery,
-and what `method-cost` can point a ledger at.
-
-```bash
-curl -X POST "$NINEROUTER_URL/v1/images/generations?response_format=binary" \
-  -H "Authorization: Bearer $NINEROUTER_KEY" -H "Content-Type: application/json" \
-  -d '{"model":"cx/gpt-5.5-image","prompt":"…","size":"1536x640"}' --output out.png
-```
-
-**Two traps, both hit while making this repo's artwork.** A model can return
-**429 quota exceeded** while its siblings work — probe cheaply, then fall back,
-which is exactly `method-harden`'s degradation rule. And **`size` is a hint**:
-two models ignored it and returned portrait. If aspect ratio matters, say it in
-the prompt as well, then *look at the result* — the only medium in which an
-image claim is settled is your own eyes.
-
----
 
 ## Layer 2 — memory and context: how work survives
 
@@ -421,9 +394,8 @@ merely admired.
 - **headroom** — context compression.
 - **rtk** — token-killing CLI proxy.
 - **Playwright MCP** — the medium in which every rendered claim is settled.
-- **Context7** — current library documentation.
-- [decolua/9router](https://github.com/decolua/9router) — the OpenAI-compatible
-  multi-provider gateway used for this repo's imagery.
+- **9router** — not a dependency of the method; it generated this repo's
+  artwork, and is credited for that alone.
 - **Claude Code** itself, whose skills, plugins, MCP and `/goal` + `/loop`
   primitives are the substrate all of this runs on.
 

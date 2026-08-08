@@ -2,7 +2,7 @@
 
 **English** · [ภาษาไทย](README.th.md)
 
-![nzs-skills](docs/assets/banner.png)
+![nzs-skills](docs/assets/banner.svg)
 
 A working method, as executable skills for [Claude Code](https://claude.com/claude-code).
 
@@ -170,8 +170,8 @@ what stores it.
 
 **[docs/ECOSYSTEM.md](docs/ECOSYSTEM.md)** ([ภาษาไทย](docs/ECOSYSTEM.th.md)) is
 the other half of this repo: every tool the method composes with — Playwright,
-CodeGraph, engram, headroom, Context7, rtk, caveman, codex, bug-hunter,
-scrutinize, debug-mantra, impeccable, 9router — what each one is, what it buys,
+CodeGraph, engram, headroom, rtk, caveman, codex, bug-hunter,
+scrutinize, debug-mantra, impeccable — what each one is, what it buys,
 how to drive it, **where it fails**, seven named stances worth memorising, use
 cases end to end, and the case studies that produced every rule here.
 
@@ -194,10 +194,8 @@ bearing ones:
   — the plugins this method runs beside daily.
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
   — the security library whose conventions the `secure` row borrows.
-- [decolua/9router](https://github.com/decolua/9router) — the gateway that
-  generated this repo's artwork.
-- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**,
-  **Context7**, and Claude Code itself, which is the substrate all of it runs on.
+- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**, and
+  Claude Code itself, which is the substrate all of it runs on.
 
 ## Licence
 

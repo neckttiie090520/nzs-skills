@@ -2,7 +2,7 @@
 
 **ภาษาไทย** · [English](README.md)
 
-![nzs-skills](docs/assets/banner.png)
+![nzs-skills](docs/assets/banner.svg)
 
 วิธีทำงานจริง เขียนออกมาเป็น skills ที่รันได้สำหรับ [Claude Code](https://claude.com/claude-code)
 
@@ -166,8 +166,8 @@ skill เป็นตัวตัดสินว่า **อะไรนับ�
 เบราว์เซอร์ `nzs-learn` บอกว่าบทเรียนต้องอยู่รอดข้าม session — engram คือตัวที่เก็บ
 
 **[docs/ECOSYSTEM.th.md](docs/ECOSYSTEM.th.md)** คืออีกครึ่งของรีโปนี้: เครื่องมือทุกตัวที่ใช้
-ร่วมกัน — Playwright, CodeGraph, engram, headroom, Context7, rtk, caveman, codex,
-bug-hunter, scrutinize, debug-mantra, impeccable, 9router — แต่ละตัวคืออะไร ได้อะไร
+ร่วมกัน — Playwright, CodeGraph, engram, headroom, rtk, caveman, codex,
+bug-hunter, scrutinize, debug-mantra, impeccable — แต่ละตัวคืออะไร ได้อะไร
 ใช้ยังไง **พังตรงไหน** พร้อมท่าที่ควรจำเจ็ดท่า use case ตั้งแต่ต้นจนจบ และกรณีศึกษาจริง
 ที่เป็นที่มาของกฎทุกข้อในรีโปนี้
 
@@ -187,9 +187,8 @@ bug-hunter, scrutinize, debug-mantra, impeccable, 9router — แต่ละต
   — ปลั๊กอินที่วิธีนี้ทำงานเคียงข้างทุกวัน
 - [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
   — คลัง security ที่แถว `ความปลอดภัย` ยืมแบบแผนมา
-- [decolua/9router](https://github.com/decolua/9router) — เกตเวย์ที่ใช้ทำภาพของรีโปนี้
-- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP**,
-  **Context7** และ Claude Code เอง ซึ่งเป็นพื้นที่ทั้งหมดนี้รันอยู่
+- **CodeGraph**, **engram**, **headroom**, **rtk**, **Playwright MCP** และ
+  Claude Code เอง ซึ่งเป็นพื้นที่ทั้งหมดนี้รันอยู่
 
 ## สัญญาอนุญาต
 
