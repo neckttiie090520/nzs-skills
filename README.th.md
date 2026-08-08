@@ -80,7 +80,7 @@ skill ไหนในรีโปนี้ระบุชื่อ framework, �
 | สร้าง | `method-plan` · `method-code` · `method-guard` · `method-harden` |
 | ตรวจ | `method-review` · `method-debug` · `method-verify` · `method-design` |
 | ความปลอดภัย | `method-security` · `method-threat` · `method-secrets` · `method-web-security` · `method-ai-security` |
-| ส่งขึ้นจริง | `method-ship` · `method` (ตัวคุมรวม) |
+| ส่งขึ้นจริง | `method-ship` · `method-run` (ตัวคุมรวม) |
 
 skill ชั้นบนเรียก discipline ได้ แต่ **ห้ามเรียก skill ชั้นบนด้วยกันเอง** — กฎข้อนี้คือสิ่งที่ทำให้
 โมเดลไม่สับสนว่าควรเรียกตัวไหน

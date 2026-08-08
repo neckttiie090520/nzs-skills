@@ -2,6 +2,8 @@
 
 **English** · [ภาษาไทย](START-HERE.th.md)
 
+![start here](assets/start-here.png)
+
 If you vibecode — you describe what you want, the AI writes it, you ship — this
 page is for you. You do not need to know what STRIDE is. You do not need to have
 read the other docs. Fifteen minutes, and you will have used this thing.

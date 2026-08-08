@@ -2,12 +2,17 @@
 
 **English** · [ภาษาไทย](ECOSYSTEM.th.md)
 
+![the tools](assets/ecosystem.png)
+
 The skills in this repository are a **method**. A method needs **capability** —
 something that can actually read a database, drive a browser, index a codebase,
 or remember last week. This page is the other half: every tool this method
 composes with, what it is, what it buys, how to use it, and where it fails.
 
 Read it once. After that, `nzs-start` will name the stack for you.
+
+**Never used this set before?** Read [Start here](START-HERE.md) first — this
+page assumes you have.
 
 ---
 

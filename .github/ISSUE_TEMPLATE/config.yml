@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: New here? Start here first
+    url: https://github.com/neckttiie090520/nzs-skills/blob/main/docs/START-HERE.md
+    about: Fifteen minutes, no jargon, and a troubleshooting section for the four things that actually go wrong.
+  - name: Security or a leaked credential
+    url: https://github.com/neckttiie090520/nzs-skills/security/advisories/new
+    about: Report privately, never as a public issue. See SECURITY.md.

@@ -1,5 +1,5 @@
 ---
-name: method
+name: method-run
 description: >-
   Runs the full working loop for a feature — acquire (research/clone/extract when
   the request carries a reference), plan, build simplest-first, review in rotating

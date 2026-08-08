@@ -72,13 +72,14 @@ currency.**
 
 | stage | skills |
 |---|---|
-| doctrine | `method-evidence` · `method-onboard` |
-| acquire | `method-research` · `method-clone` · `method-extract` |
+| the rules | `method-evidence` · `method-onboard` |
+| gather | `method-research` · `method-clone` · `method-extract` |
 | decide | `method-decide` · `method-cost` · `method-record` · `method-postmortem` · `method-scope` · `method-discovery` · `method-ideas` |
 | build | `method-plan` · `method-code` · `method-guard` · `method-harden` |
-| verify | `method-review` · `method-debug` · `method-verify` · `method-design` |
+| check | `method-review` · `method-debug` · `method-verify` · `method-design` |
 | secure | `method-security` · `method-threat` · `method-secrets` · `method-web-security` · `method-ai-security` |
-| ship | `method-ship` · `method` (orchestrator) |
+| ship | `method-ship` |
+| run it all | `method-run` — drives a whole feature through the stages above |
 
 A user-invoked skill may call a discipline. It never calls another user-invoked
 skill — the rule that keeps triggers unambiguous.
