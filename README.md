@@ -44,6 +44,9 @@ currency.**
 | **`nzs-goal`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
 | **`nzs-grill`** | interviews until every branch resolves, then ends in an artifact |
 | **`nzs-panel`** | outsider with declared bias, opinionated CTO, senior who corrects both |
+| **`nzs-setup`** | installs the whole environment and *proves* each piece works |
+| **`nzs-handoff`** | compacts a session into something the next agent can resume from |
+| **`nzs-learn`** | records wins, mistake *shapes*, and your taste — into engram |
 
 **Disciplines.** The model reaches for these. One thing each, done properly.
 
@@ -111,7 +114,7 @@ point has already broken its first rule.
 ## Layout
 
 ```
-skills/           26 skills, one directory each
+skills/           29 skills, one directory each
 commands/         slash commands for the four entry points
 .claude-plugin/   plugin manifest
 docs/adr/         the decisions, with what they cost
