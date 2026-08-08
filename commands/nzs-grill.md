@@ -1,5 +1,5 @@
 ---
-description: Interviews you until every branch of the design resolves, then ends in an artifact — never a summary.
+description: Resolves every branch of the design itself, by spawning subagents — never waits on you — then ends in an artifact, not a summary.
 ---
 
 Invoke the `nzs-grill` skill and follow it exactly. Arguments: $ARGUMENTS

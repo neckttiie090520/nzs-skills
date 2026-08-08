@@ -93,7 +93,7 @@ currency.**
 | command | when |
 |---|---|
 | **`/nzs-start`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
-| **`/nzs-grill`** | a vague idea you want pinned down before building. Ends in an artifact, never a summary |
+| **`/nzs-grill`** | a vague idea you want pinned down — agentically: it spawns subagents to resolve branches, never asks you to sit through an interview |
 | **`/nzs-panel`** | you want it argued with — a biased outsider, a hard-to-please CTO, and a senior who corrects both |
 | **`/nzs-goal`** | work too big for one sitting. Writes a `/goal` prompt and a plan file the loop re-reads, built to terminate |
 | **`/nzs-setup`** | a fresh machine. Installs the environment and *proves* each piece works |
@@ -127,7 +127,7 @@ Everything else the model reaches for on its own.
 |---|---|
 | **`nzs-start`** | returns the skill *stack* for a job, with an observable exit condition |
 | **`nzs-goal`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
-| **`nzs-grill`** | interviews until every branch resolves, then ends in an artifact |
+| **`nzs-grill`** | resolves every branch itself — spawns a subagent to research, or a role cast to judge — then ends in an artifact |
 | **`nzs-panel`** | outsider with declared bias, opinionated CTO, senior who corrects both |
 | **`nzs-setup`** | installs the whole environment and *proves* each piece works |
 | **`nzs-handoff`** | compacts a session into something the next agent can resume from |
@@ -222,7 +222,8 @@ This method stands on other people's work. Full list, with what each is used
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) — the user-invoked /
   model-invoked split and the shared-language file, which is the structure of
-  this whole repo. `nzs-grill` is adapted from his `grill-me`.
+  this whole repo. `nzs-grill` is adapted from his `grill-me`, though it has since diverged:
+  ours never blocks on a human, resolving branches by spawning subagents instead.
 - [obra/superpowers](https://github.com/obra/superpowers) — process-before-
   implementation discipline.
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — output
