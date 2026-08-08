@@ -343,6 +343,13 @@ could not verify as **unverified** rather than done.
 **"I'm out of context."**
 `nzs-learn` → `nzs-handoff`.
 
+**"I found a credential in old chat history / a commit / a log."**
+`method-secrets` — exposure is rotation, not cleanup: rotate first, revoke,
+confirm the old one fails, then clean up the artifact. If the credential is
+privileged (service-role, admin), continue into `method-security` to check
+what a public path could have reached with it. Never `nzs-learn` — a memory
+tool must never store a secret value.
+
 ---
 
 ## Case studies — what actually happened
