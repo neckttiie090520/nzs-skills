@@ -166,8 +166,10 @@ Stack:
 ## ถ้ามันไม่ทำงาน
 
 **พิมพ์ `/` แล้วไม่เห็น `nzs-start`**
-แปลว่าปลั๊กอินยังไม่ติดหรือยังไม่ reload สั่ง `/plugin` ดูว่ามี `nzs-skills` อยู่ไหม แล้วสั่ง
-`/reload-plugins` ถ้าคุณก๊อปไฟล์เอง ไฟล์ต้องอยู่ใน `~/.claude/skills/` หรือ `.claude/skills/`
+เกือบทุกครั้งคือ session ยังไม่ได้โหลดใหม่ Claude Code อ่านรายการ skill, plugin และ MCP
+**ตอนเปิด session** เพราะงั้นอะไรที่ติดตั้งระหว่างทางจะอยู่บนดิสก์แต่ยังไม่ถูกโหลด
+สั่ง `/reload-plugins` ก่อน ถ้ายังไม่ขึ้นให้ **restart Claude Code** — MCP server ที่เพิ่ง
+เชื่อมต่อใหม่ต้อง restart เสมอ จากนั้นสั่ง `/plugin` ดูว่ามี `nzs-skills` อยู่ไหม ถ้าคุณก๊อปไฟล์เอง ไฟล์ต้องอยู่ใน `~/.claude/skills/` หรือ `.claude/skills/`
 หนึ่งโฟลเดอร์ต่อหนึ่ง skill และข้างในต้องมี `SKILL.md`
 
 **มันถามหา `.method/config.yml`**

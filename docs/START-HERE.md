@@ -179,8 +179,11 @@ written down so the AI asks it of itself before you have to.
 ## When it doesn't work
 
 **`/nzs-start` doesn't appear when I type `/`**
-The plugin didn't install or didn't reload. Run `/plugin` and check
-`nzs-skills` is listed. Then `/reload-plugins`. If you copied the files by hand
+Almost always the session has not reloaded. Claude Code reads its skill, plugin
+and MCP registries **at startup**, so anything installed mid-session is on disk
+but not loaded. Run `/reload-plugins`, and if that is not enough, **restart
+Claude Code** — a newly connected MCP server always needs the restart. Then run
+`/plugin` and check `nzs-skills` is listed. If you copied the files by hand
 instead, they must be in `~/.claude/skills/` or `.claude/skills/` — one folder
 per skill, each containing a `SKILL.md`.
 
