@@ -30,7 +30,7 @@ something wrong for reasons the skill did not instruct.
 
 ## If you find a credential in this repository
 
-Report it privately, and assume it is already compromised. `method-secrets`
+Report it privately, and assume it is already compromised. `method-vault`
 states the rule this project holds itself to: **exposure is a rotation event,
 never a cleanup event.** Deleting the line does not un-publish it. The fix is
 rotate, revoke, confirm the old one fails, then clean up.
@@ -47,6 +47,6 @@ them.
 - **The security skills describe defensive review** — authorization tracing,
   threat modelling, secret handling, application and AI security. They are for
   systems you own or are authorised to test.
-- `nzs-setup` installs tooling and asks before doing anything expensive or
+- `nzs-bootcamp` installs tooling and asks before doing anything expensive or
   irreversible, such as indexing a whole repository. If a skill here ever takes
   an irreversible action without asking, that is a bug worth reporting.

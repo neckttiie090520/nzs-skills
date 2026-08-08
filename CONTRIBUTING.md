@@ -19,8 +19,8 @@ back, the ledger. If your skill cannot name the evidence, it is a preference.
 
 **It must be portable.** No skill names a framework, a database, or a currency.
 Anything project-specific is read from `.method/config.yml`, which
-`method-onboard` writes. If you need a new config key, add it to
-`method-onboard` in the same pull request — a key nothing writes is a key that
+`method-groundwork` writes. If you need a new config key, add it to
+`method-groundwork` in the same pull request — a key nothing writes is a key that
 is always missing.
 
 ## Which layer
@@ -34,7 +34,7 @@ A user-invoked skill may call a discipline. It never calls another user-invoked
 skill — that rule is what keeps triggers unambiguous, and it is the reason the
 `decide / pm / ideate / discovery` collision stopped mattering.
 
-A new `nzs-` skill needs a row in `nzs-start` and a file in `commands/`. The
+A new `nzs-` skill needs a row in `nzs-compass` and a file in `commands/`. The
 validator enforces both, because an entry point nothing routes to is one nobody
 will ever reach — which is a defect this repo shipped once already.
 
@@ -63,7 +63,7 @@ against writing counts in prose. It is fast and has no dependencies.
 **If you add a check, mutation-test it.** Break the thing it is meant to catch,
 watch it go red, restore, watch it go green — and put that transcript in the
 pull request. A check nobody has seen fail is decoration, and this repo will not
-merge decoration. That rule is `method-guard`, applied to itself.
+merge decoration. That rule is `method-tripwire`, applied to itself.
 
 ## What gets rejected
 

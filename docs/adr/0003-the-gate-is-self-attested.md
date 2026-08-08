@@ -4,7 +4,7 @@
 
 ## Context
 
-The set's foundation is `method-evidence`'s gate: before any claim of done, name
+The set's foundation is `method-rulebook`'s gate: before any claim of done, name
 the medium and the artifact that settled it. It exists because three edits in
 one session silently matched nothing and were reported as complete, and because
 a probe that matched *too much* threw an error that was read as "feature

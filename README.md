@@ -80,10 +80,10 @@ that makes a correct install look broken.
 Then, in any project:
 
 ```
-/nzs-start I need to add rate limiting to the public API
+/nzs-compass I need to add rate limiting to the public API
 ```
 
-The first run writes `.method/config.yml` via `method-onboard`. Everything
+The first run writes `.method/config.yml` via `method-groundwork`. Everything
 project-specific lives there — commands, mediums, budgets, references, model
 tiers — which is why **no skill in this repo names a framework, a database, or a
 currency.**
@@ -94,12 +94,12 @@ currency.**
 
 | command | when |
 |---|---|
-| **`/nzs-start`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
-| **`/nzs-roundtable`** | a vague idea to resolve, or a decision to attack — seats a biased outsider, a hard-to-please CTO, and a senior who arbitrates. Never waits on you |
-| **`/nzs-goal`** | work too big for one sitting. Writes a `/goal` prompt and a plan file the loop re-reads, built to terminate |
-| **`/nzs-setup`** | a fresh machine. Installs the environment and *proves* each piece works |
-| **`/nzs-learn`** | something worked, or broke. Records the *shape* of it into engram |
-| **`/nzs-handoff`** | out of context, or stopping for the day |
+| **`/nzs-compass`** | any time you are unsure. Returns the skill *stack* for the job, with an exit condition anyone can check |
+| **`/nzs-huddle`** | a vague idea to resolve, or a decision to attack — seats a biased outsider, a hard-to-please CTO, and a senior who arbitrates. Never waits on you |
+| **`/nzs-marathon`** | work too big for one sitting. Writes a `/goal` prompt and a plan file the loop re-reads, built to terminate |
+| **`/nzs-bootcamp`** | a fresh machine. Installs the environment and *proves* each piece works |
+| **`/nzs-scrapbook`** | something worked, or broke. Records the *shape* of it into engram |
+| **`/nzs-baton`** | out of context, or stopping for the day |
 
 Everything else the model reaches for on its own.
 
@@ -107,10 +107,10 @@ Everything else the model reaches for on its own.
 
 ## How it works
 
-![the flow: you ask, nzs-start plans a stack, tools gather evidence, nothing ships without it](docs/assets/flow.svg)
+![the flow: you ask, nzs-compass plans a stack, tools gather evidence, nothing ships without it](docs/assets/flow.svg)
 
 1. **You ask.** Plain language, in any language.
-2. **`nzs-start` returns a stack, not a menu.** A router that hands you three
+2. **`nzs-compass` returns a stack, not a menu.** A router that hands you three
    options has given the decision back to you.
 3. **The skills send tools to look** — the live DOM for a rendered claim, real
    rows for a persistence claim, the ledger for cost, a command's exit code for
@@ -126,25 +126,25 @@ Everything else the model reaches for on its own.
 
 | skill | what it does |
 |---|---|
-| **`nzs-start`** | returns the skill *stack* for a job, with an observable exit condition |
-| **`nzs-goal`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
-| **`nzs-roundtable`** | resolves a shapeless request into an artifact, or judges a formed decision into a verdict — same three seats, agentic, never waits on you |
-| **`nzs-setup`** | installs the whole environment and *proves* each piece works |
-| **`nzs-handoff`** | compacts a session into something the next agent can resume from |
-| **`nzs-learn`** | records wins, mistake *shapes*, and your taste — into engram |
+| **`nzs-compass`** | returns the skill *stack* for a job, with an observable exit condition |
+| **`nzs-marathon`** | writes a `/goal` prompt and the plan file a loop re-reads, built to terminate |
+| **`nzs-huddle`** | resolves a shapeless request into an artifact, or judges a formed decision into a verdict — same three seats, agentic, never waits on you |
+| **`nzs-bootcamp`** | installs the whole environment and *proves* each piece works |
+| **`nzs-baton`** | compacts a session into something the next agent can resume from |
+| **`nzs-scrapbook`** | records wins, mistake *shapes*, and your taste — into engram |
 
 **Disciplines.** The model reaches for these. One thing each, done properly.
 
 | stage | skills |
 |---|---|
-| the rules | `method-evidence` · `method-onboard` |
-| gather | `method-research` · `method-clone` · `method-extract` |
-| decide | `method-decide` · `method-cost` · `method-record` · `method-postmortem` · `method-scope` · `method-discovery` · `method-ideas` |
-| build | `method-plan` · `method-code` · `method-guard` · `method-harden` |
-| check | `method-review` · `method-debug` · `method-verify` · `method-design` |
-| secure | `method-security` · `method-threat` · `method-secrets` · `method-web-security` · `method-ai-security` |
-| ship | `method-ship` |
-| run it all | `method-run` — drives a whole feature through the stages above |
+| the rules | `method-rulebook` · `method-groundwork` |
+| gather | `method-scout` · `method-mimic` · `method-distill` |
+| decide | `method-greenlight` · `method-tab` · `method-logbook` · `method-autopsy` · `method-brief` · `method-fieldwork` · `method-longlist` |
+| build | `method-blueprint` · `method-craft` · `method-tripwire` · `method-stress-test` |
+| check | `method-gauntlet` · `method-whodunit` · `method-witness` · `method-sketch` |
+| secure | `method-lockpick` · `method-lookout` · `method-vault` · `method-trapdoor` · `method-puppeteer` |
+| ship | `method-launch` |
+| run it all | `method-conductor` — drives a whole feature through the stages above |
 
 A user-invoked skill may call a discipline. It never calls another user-invoked
 skill — the rule that keeps triggers unambiguous.
@@ -169,7 +169,7 @@ skill — the rule that keeps triggers unambiguous.
 ## The known weakness
 
 The anti-theatre gate is **self-attested**. A model can tick its checkboxes and
-paste invented command output; nothing external witnesses it. `nzs-roundtable`'s Judge job is the closest thing to an external witness here, and it is not enough. Making the
+paste invented command output; nothing external witnesses it. `nzs-huddle`'s Judge job is the closest thing to an external witness here, and it is not enough. Making the
 independent reviewer's re-run mandatory for load-bearing claims is the open
 design decision.
 
@@ -199,8 +199,8 @@ seen red, restored, seen green. CI runs exactly this and nothing else.
 ## It does not work alone
 
 A skill decides **what counts as evidence**. A tool is **how you go and get it**.
-`method-verify` says a rendered claim is settled in the DOM; Playwright is what
-opens the browser. `nzs-learn` says a lesson must outlive the session; engram is
+`method-witness` says a rendered claim is settled in the DOM; Playwright is what
+opens the browser. `nzs-scrapbook` says a lesson must outlive the session; engram is
 what stores it.
 
 **[The ecosystem guide](docs/ECOSYSTEM.md)** ([ภาษาไทย](docs/ECOSYSTEM.th.md))
@@ -221,7 +221,7 @@ This method stands on other people's work. Full list, with what each is used
 
 - [mattpocock/skills](https://github.com/mattpocock/skills) — the user-invoked /
   model-invoked split and the shared-language file, which is the structure of
-  this whole repo. `nzs-roundtable`'s Resolve job is adapted from his `grill-me`, though
+  this whole repo. `nzs-huddle`'s Resolve job is adapted from his `grill-me`, though
   it has since diverged: ours never blocks on a human, resolving branches by
   spawning subagents instead.
 - [obra/superpowers](https://github.com/obra/superpowers) — process-before-

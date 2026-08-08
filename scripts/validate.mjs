@@ -89,6 +89,28 @@ for (const [dir, { fm }] of skills) {
 }
 ran("frontmatter contract", skills.size);
 
+// ---------------------------------------------------- 1b. the H1 stays honest
+//
+// Three separate renames left the frontmatter `name` updated but the body's
+// `# Method Whatever` heading pointing at the OLD name — invisible because
+// nothing compared them. The rename script only ever touched the hyphenated
+// identifier; a human-readable "Title Case With Spaces" heading was a
+// different string, so it survived three passes unnoticed. Same shape as the
+// count-in-prose defect, one level down: a value duplicated between the
+// frontmatter and the body, with nothing keeping the second one honest.
+
+for (const [dir, { text }] of skills) {
+  const m = text.match(/^# (.+)$/m);
+  if (!m) {
+    fail("skill has an H1 title", `${dir} — no "# Title" line in the body`);
+    continue;
+  }
+  const normalised = m[1].trim().toLowerCase().replace(/\s+/g, "-");
+  if (normalised !== dir)
+    fail("H1 matches the skill's current name", `${dir} — body heading reads "${m[1]}", a name this skill no longer has`);
+}
+ran("H1 titles", skills.size);
+
 // --------------------------------------- 2. descriptions are not cut mid-word
 //
 // All seven command descriptions once shipped sliced at ~100 chars: "in what ",
@@ -104,7 +126,7 @@ for (const [dir, { fm }] of skills) {
 
 // ------------------------------------------------- 3. no dangling cross-links
 
-// [a-z-]+ , not [a-z]+ — two-word skills like `method-web-security` matched
+// [a-z-]+ , not [a-z]+ — two-word skills like `method-trapdoor` matched
 // NOTHING under the old pattern, so every cross-reference to them was silently
 // unchecked. A guard that quietly stops covering part of its surface is worse
 // than one that fails loudly.
@@ -121,10 +143,10 @@ ran("cross-references", linkCount);
 
 // ------------------------------- 4. every entry point is reachable and wired
 //
-// nzs-start once named exactly one of the six nzs-* skills. Five entry points
+// nzs-compass once named exactly one of the six nzs-* skills. Five entry points
 // existed and no request could reach them.
 
-const ROUTER = "nzs-start";
+const ROUTER = "nzs-compass";
 // The router is an entry point too, but it cannot be required to route to
 // itself — you reach it by typing its name.
 const entryPoints = [...skills.keys()].filter((n) => n.startsWith("nzs-") && n !== ROUTER);
@@ -207,7 +229,7 @@ for (const file of PROSE) {
 
 // ------------------------------------------------------- 8. no secret shapes
 //
-// This repo is public. method-secrets says exposure is a rotation event, so the
+// This repo is public. method-vault says exposure is a rotation event, so the
 // cheapest moment to catch a key is before it is ever pushed.
 
 const SECRET_SHAPES = [

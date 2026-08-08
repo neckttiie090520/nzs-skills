@@ -1,4 +1,4 @@
-# 0006 — `nzs-grill` and `nzs-panel` merge into `nzs-roundtable`
+# 0006 — `nzs-grill` and `nzs-panel` merge into `nzs-huddle`
 
 **Status:** accepted
 **Date:** 2026-08-09
@@ -22,7 +22,7 @@ The owner asked for a merge under one clear, memorable name.
 
 ## Decision
 
-Merge into **`nzs-roundtable`**. One engine, two jobs, distinguished by scope
+Merge into **`nzs-huddle`**. One engine, two jobs, distinguished by scope
 rather than by which of two similarly-described skills the user happened to
 pick:
 
@@ -51,15 +51,15 @@ to already know the answer this repo exists to give.
 
 Two directory removals (`nzs-grill`, `nzs-panel`), one command file, and every
 reference across README (both languages), the ecosystem guide (both
-languages), START-HERE (both languages), `nzs-start`'s routing table, and
-`nzs-goal`'s cross-references — a full sweep, not a redirect. 33 skills, 6
+languages), START-HERE (both languages), `nzs-compass`'s routing table, and
+`nzs-marathon`'s cross-references — a full sweep, not a redirect. 33 skills, 6
 entry points, down from 34 and 7.
 
 ## Consequences
 
-- `nzs-start`'s routing table now points both the "elicit" and "challenge"
-  rows at `nzs-roundtable`, naming which job in parentheses — the router
+- `nzs-compass`'s routing table now points both the "elicit" and "challenge"
+  rows at `nzs-huddle`, naming which job in parentheses — the router
   still resolves to one skill per request, it just also names the mode.
 - Anyone who invoked `/nzs-grill` or `/nzs-panel` directly (rather than
-  through the router) needs `/nzs-roundtable` instead — recorded as a
+  through the router) needs `/nzs-huddle` instead — recorded as a
   breaking change in CHANGELOG.md, version bumped to 1.3.0.

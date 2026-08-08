@@ -55,7 +55,7 @@ kind of work.
 
 If the install says `Run /reload-plugins to activate`, run that.
 
-**Check it worked.** Type `/` and you should see `nzs-start` in the list. If you
+**Check it worked.** Type `/` and you should see `nzs-compass` in the list. If you
 don't, the install didn't take — see [When it doesn't work](#when-it-doesnt-work).
 
 ---
@@ -65,7 +65,7 @@ don't, the install didn't take — see [When it doesn't work](#when-it-doesnt-wo
 Don't read the skill list. Just ask:
 
 ```
-/nzs-start I want to add a login page to my app
+/nzs-compass I want to add a login page to my app
 ```
 
 You will get back a **plan of which skills to use, in order**, and — the part
@@ -75,12 +75,12 @@ that matters — a finish line anyone can check. Something like:
 Job type: build
 
 Stack:
-  1. method-plan      break it into milestones with a check for each
-  2. method-code      write it, one milestone at a time
-  3. method-security  it handles credentials, so this is not optional
-  4. method-verify    prove it before you call it done
+  1. method-blueprint      break it into milestones with a check for each
+  2. method-craft      write it, one milestone at a time
+  3. method-lockpick  it handles credentials, so this is not optional
+  4. method-witness    prove it before you call it done
 
-Not in the stack: method-research — you are not copying anyone's design.
+Not in the stack: method-scout — you are not copying anyone's design.
 
 Done when: you can log in as a real user in the browser, and logging in
 as user A cannot read user B's data (proven by an actual request, not by
@@ -97,7 +97,7 @@ Now just say **"go"** and let it work through the stack.
 
 ## What you'll notice is different
 
-**It argues with itself.** `method-review` goes over your code several times,
+**It argues with itself.** `method-gauntlet` goes over your code several times,
 wearing a different hat each round — one round only hunts security holes, one
 only hunts edge cases, one only reads it as a stranger. Each hat sees things the
 others structurally cannot. And each round starts by re-checking that the
@@ -112,7 +112,7 @@ trust.
 **It says no.** Ask it whether to build something and it is allowed to answer
 *"don't"* — with the reason written down, so you don't re-argue it next month.
 
-**It remembers.** `/nzs-learn` records what worked and — more useful — the
+**It remembers.** `/nzs-scrapbook` records what worked and — more useful — the
 *shape* of mistakes. Not "the edit failed on line 40", but "a find-and-replace
 whose target text had already changed". A shape you can recognise next month in
 a different file. The instance teaches you nothing; the shape teaches you
@@ -126,37 +126,37 @@ Everything else the AI picks up on its own. You only need these.
 
 | type this | when |
 |---|---|
-| `/nzs-start` | **any time you're unsure.** It plans which tools to use |
-| `/nzs-roundtable` | a vague idea to resolve, or a decision to argue with — seats a biased outsider, a CTO, and a senior. Never waits on you |
-| `/nzs-learn` | something just worked, or just broke, and you want it remembered |
-| `/nzs-handoff` | you're out of context or stopping for the day |
+| `/nzs-compass` | **any time you're unsure.** It plans which tools to use |
+| `/nzs-huddle` | a vague idea to resolve, or a decision to argue with — seats a biased outsider, a CTO, and a senior. Never waits on you |
+| `/nzs-scrapbook` | something just worked, or just broke, and you want it remembered |
+| `/nzs-baton` | you're out of context or stopping for the day |
 
-There is also `/nzs-setup` for a fresh machine, and `/nzs-goal` for jobs too big
+There is also `/nzs-bootcamp` for a fresh machine, and `/nzs-marathon` for jobs too big
 for one sitting.
 
 ---
 
 ## "Which one do I need?" — in plain words
 
-You never have to memorise this. `/nzs-start` picks for you. But if you like
+You never have to memorise this. `/nzs-compass` picks for you. But if you like
 knowing what's in the box:
 
 | what you're thinking | the skill |
 |---|---|
-| "should we even build this?" | `method-decide` |
-| "what would this cost to run?" | `method-cost` |
-| "is this code any good?" | `method-code` |
-| "find what's wrong with it" | `method-review` |
-| "why is this broken?" | `method-debug` |
-| "prove it actually works" | `method-verify` |
-| "will it survive real users?" | `method-harden` |
-| "can someone hack this?" | `method-security` |
-| "is it safe to put AI in it?" | `method-ai-security` |
-| "I leaked an API key" | `method-secrets` |
-| "make this bug impossible to repeat" | `method-guard` |
-| "make it look good" | `method-design` |
-| "copy how that site does it" | `method-clone` |
-| "ship it" | `method-ship` |
+| "should we even build this?" | `method-greenlight` |
+| "what would this cost to run?" | `method-tab` |
+| "is this code any good?" | `method-craft` |
+| "find what's wrong with it" | `method-gauntlet` |
+| "why is this broken?" | `method-whodunit` |
+| "prove it actually works" | `method-witness` |
+| "will it survive real users?" | `method-stress-test` |
+| "can someone hack this?" | `method-lockpick` |
+| "is it safe to put AI in it?" | `method-puppeteer` |
+| "I leaked an API key" | `method-vault` |
+| "make this bug impossible to repeat" | `method-tripwire` |
+| "make it look good" | `method-sketch` |
+| "copy how that site does it" | `method-mimic` |
+| "ship it" | `method-launch` |
 
 ---
 
@@ -177,7 +177,7 @@ written down so the AI asks it of itself before you have to.
 
 ## When it doesn't work
 
-**`/nzs-start` doesn't appear when I type `/`**
+**`/nzs-compass` doesn't appear when I type `/`**
 Almost always the session has not reloaded. Claude Code reads its skill, plugin
 and MCP registries **at startup**, so anything installed mid-session is on disk
 but not loaded. Run `/reload-plugins`, and if that is not enough, **restart
@@ -188,7 +188,7 @@ per skill, each containing a `SKILL.md`.
 
 **It asks about `.method/config.yml`**
 Normal on first use. That file records what *your* project uses — your test
-command, your database, your browser. Let `method-onboard` write it; it asks at
+command, your database, your browser. Let `method-groundwork` write it; it asks at
 most six questions and works the rest out by looking at your files. This is why
 no skill here hardcodes a framework or a database: they all read that file.
 

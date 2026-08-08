@@ -5,12 +5,12 @@
 
 ## Context
 
-`method-review`'s selection table routes to the `security` role for endpoints,
+`method-gauntlet`'s selection table routes to the `security` role for endpoints,
 migrations, AI calls and server actions — four of its six rows, making it the
 most-selected role in the set. Nothing defined what that role does.
 
 A roster entry with no discipline behind it reviews by taste. This is the exact
-failure `method-onboard` warns about for roles ("a table that selects a role the
+failure `method-groundwork` warns about for roles ("a table that selects a role the
 roster lacks selects nothing"), committed inside our own set and unnoticed
 through three adversarial review rounds — because every round selected the role
 and none asked what it read.
@@ -21,8 +21,8 @@ The prompting case was
 
 ## Decision
 
-Write five disciplines — `method-security`, `method-threat`, `method-secrets`,
-`method-web-security`, `method-ai-security` — scoped to the systems this method is used on.
+Write five disciplines — `method-lockpick`, `method-lookout`, `method-vault`,
+`method-trapdoor`, `method-puppeteer` — scoped to the systems this method is used on.
 Do **not** vendor the domain library.
 
 Two of its conventions are adopted: a verification section per skill, and
@@ -48,12 +48,12 @@ nobody re-derives the comparison.
 
 ## Consequences
 
-- `method-review` now names the discipline each role wears, so selecting
+- `method-gauntlet` now names the discipline each role wears, so selecting
   `security` reads a method rather than improvising one.
-- `nzs-start` routes threat modelling before building anything that handles
+- `nzs-compass` routes threat modelling before building anything that handles
   credentials, money, other people's data, or external input.
-- `method-secrets` makes the project's existing practice explicit and
+- `method-vault` makes the project's existing practice explicit and
   enforceable: exposure is a rotation event, never a cleanup event.
-- `method-ai-security` records, with its reasoning, a decision the source project had
+- `method-puppeteer` records, with its reasoning, a decision the source project had
   already made correctly and never written down — model output is rendered as
   elements, never through a raw-HTML sink.

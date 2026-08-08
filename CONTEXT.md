@@ -41,7 +41,7 @@ A user-invoked skill may call a discipline. It never calls another `nzs-*`.
 
 ## The config
 
-`.method/config.yml`, written by `method-onboard` on first run. Everything
+`.method/config.yml`, written by `method-groundwork` on first run. Everything
 project-specific lives there — commands, mediums, budgets, references, roles,
 model tiers — which is why no skill in this repo names a framework, a database
 or a currency.
