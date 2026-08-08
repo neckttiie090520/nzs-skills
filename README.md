@@ -226,6 +226,8 @@ This method stands on other people's work. Full list, with what each is used
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — output
   compression that keeps every technical fact, and the README shape this page
   borrows: proof before philosophy.
+- [fivetaku/fablize](https://github.com/fivetaku/fablize) — the same evidence
+  rule enforced as a hook, which is the level this method does not reach.
 - [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) and
   [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
   — the plugins this method runs beside daily.

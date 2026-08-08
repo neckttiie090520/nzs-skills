@@ -216,6 +216,8 @@ skill เป็นตัวตัดสินว่า **อะไรนับ�
 - [obra/superpowers](https://github.com/obra/superpowers) — วินัยว่ากระบวนการมาก่อนการลงมือ
 - [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) — บีบอัดคำตอบโดยเก็บ
   ข้อเท็จจริงทางเทคนิคครบ และเป็นต้นแบบโครง README ของหน้านี้: เอาหลักฐานขึ้นก่อนปรัชญา
+- [fivetaku/fablize](https://github.com/fivetaku/fablize) — กฎเรื่องหลักฐานเดียวกัน แต่บังคับ
+  ในรูปแบบ hook ซึ่งเป็นชั้นที่วิธีนี้เอื้อมไม่ถึง
 - [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) และ
   [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
   — ปลั๊กอินที่วิธีนี้ทำงานเคียงข้างทุกวัน

@@ -43,8 +43,7 @@ would be worthless the day you changed drivers. Instead, every project writes
    capability            memory + context        review engines
    playwright            engram, headroom        codex, bug-hunter,
    codegraph             CLAUDE.md               scrutinize, impeccable
-                      handoff.md              debug-mantra
-   your db client
+   your db client        handoff.md              debug-mantra, fablize
 ```
 
 ---
@@ -218,6 +217,42 @@ Establishes that process skills run *before* implementation skills: brainstorm
 before planning, systematic debugging before domain fixes. Compatible with this
 set by design — `nzs-start` occupies the same slot for this method's own skills.
 
+### fablize — the same rule, enforced mechanically
+
+**What it is.** A Claude Code plugin
+([fivetaku/fablize](https://github.com/fivetaku/fablize)) shipping the
+procedural differences its author measured between Fable 5 and Opus across
+roughly 1,500 tool calls — and **only** the ones the comparison proved
+transferable. Its README states the ceiling plainly: *"It cannot raise model
+capability."* That refusal to overclaim is a large part of why it is here.
+
+```
+/plugin marketplace add fivetaku/fablize
+/plugin install fablize
+bash ${CLAUDE_PLUGIN_ROOT}/setup/setup.sh    # always-on mode
+```
+
+**Check:** `/fablize` answers and the plugin appears in `/plugin`. Like
+everything else in this guide, it installs and proves itself with no account to
+create.
+
+**What it buys — and why it is the closest thing here to a fix for our stated
+weakness.** It enforces what this method merely *instructs*: run and observe the
+rendered artifact before claiming done, decompose the work and refuse completion
+without evidence, reproduce before hypothesising, and an **early-stop hook** that
+blocks an incomplete claim of completion.
+
+Read that against [the known weakness](../README.md#the-known-weakness). Our
+anti-theatre gate is **self-attested** — a model can tick its own boxes and
+paste invented output. A hook cannot be talked around by the model it
+constrains. The overlap is not duplication; it is the same rule at a different
+level of the stack, and the mechanical level is the one we do not have.
+
+**The honest caveat.** Two systems enforcing one rule can double-report a
+finding, and a stop that fires for a reason you did not write is harder to debug
+than one you did. Running both, treat fablize as the floor and `method-verify`
+as the discipline above it — not as two opinions to reconcile.
+
 ### fable modes — model tiering when spawning
 
 `fable-opus` / `fable-sonnet` / `fable-haiku` map work to model capability.
@@ -379,6 +414,9 @@ merely admired.
 - [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc) — Codex as
   the independent review engine, the nearest thing to an external witness this
   method has.
+- [fivetaku/fablize](https://github.com/fivetaku/fablize) — the verification
+  gate as a hook rather than an instruction, and a README honest about its own
+  ceiling.
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
   — Vercel and Figma plugins.
 

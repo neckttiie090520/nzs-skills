@@ -1,6 +1,6 @@
 ---
 name: nzs-setup
-description: Installs and VERIFIES the whole working environment in a workspace — the nzs-skills set, plus codegraph, engram, headroom, rtk, caveman and fablelize — then writes .method/config.yml. Every tool is proven working by running it, never by reporting that it was installed. Use on a fresh workspace, a new machine, or when the user says ติดตั้ง / setup / เตรียมเครื่อง / set this project up / install everything.
+description: Installs and VERIFIES the whole working environment in a workspace — the nzs-skills set, plus codegraph, engram, headroom, rtk, caveman and fablize — then writes .method/config.yml. Every tool is proven working by running it, never by reporting that it was installed. Use on a fresh workspace, a new machine, or when the user says ติดตั้ง / setup / เตรียมเครื่อง / set this project up / install everything.
 ---
 
 # nzs-setup
@@ -62,8 +62,8 @@ An MCP server. Check it is connected, then prove a round trip:
 answer, memory is live. If the tools are not listed, engram is not connected to
 this workspace — say so and point at the MCP config; do not pretend.
 
-This is what `/self-learning` writes into. Without it, that skill degrades to a
-local file and must say so.
+This is what `nzs-learn` writes into. Without it, that skill degrades to a local
+file and must say so.
 
 ## 4. headroom — context compression
 
@@ -93,9 +93,23 @@ A plugin, with levels. Set it to **full**:
 filler. If the statusline badge is not configured, offer the one-line settings
 edit rather than doing it silently.
 
-## 7. fablelize
+## 7. fablize — the verification gate as a hook
 
-**Check:** it appears in the plugin or skill listing and answers when invoked.
+```
+/plugin marketplace add fivetaku/fablize
+/plugin install fablize
+bash ${CLAUDE_PLUGIN_ROOT}/setup/setup.sh    # always-on mode
+```
+
+**Check:** `/fablize` answers, and it appears in `/plugin`. Verify AFTER the
+restart in step 8, not before — a freshly installed plugin is not loaded yet.
+
+Worth installing rather than optional: it enforces mechanically what this set
+enforces by instruction — observe the rendered artifact before claiming done,
+refuse completion without evidence, and an early-stop hook against incomplete
+claims. A hook cannot be talked around by the model it constrains, which is
+exactly the gap in a self-attested gate.
+
 If you cannot find it, say so plainly and move on — a setup that invents a
 successful install of something absent is worse than an incomplete setup.
 
@@ -144,7 +158,7 @@ tool        status      proven by
 codegraph   ok          explore "AiDraftForm" returned source
 engram      ok          mem_current_project answered
 rtk         WRONG PKG   gain failed; rtk --version answered (Rust Type Kit)
-fablelize   absent      not in plugin listing
+fablize     absent      not in plugin listing
 ```
 
 ## What you refuse
