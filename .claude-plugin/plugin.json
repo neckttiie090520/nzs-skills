@@ -1,0 +1,7 @@
+{
+  "name": "nzs-skills",
+  "version": "1.0.0",
+  "description": "A working method as executable skills: acquire by evidence, decide before you build, guard what recurs, review in rotating roles, verify in the medium where the claim is true, and ship only what production can hold. Extracted from 279 commits and 106 instructions of real work.",
+  "author": { "name": "NZS" },
+  "keywords": ["workflow", "review", "verification", "guards", "agentic-loop", "pipeline"]
+}
