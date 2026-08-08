@@ -1,5 +1,7 @@
 # nzs-skills
 
+**English** · [ภาษาไทย](README.th.md)
+
 A working method, as executable skills for [Claude Code](https://claude.com/claude-code).
 
 [![validate](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/neckttiie090520/nzs-skills/actions/workflows/validate.yml)

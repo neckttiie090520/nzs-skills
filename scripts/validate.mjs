@@ -152,11 +152,16 @@ ran("commands", commandFiles.length);
 //
 // A skill absent from the README is a skill nobody browsing the repo finds.
 
-const readme = readFileSync("README.md", "utf8");
-for (const name of skills.keys())
-  if (!readme.includes(`\`${name}\``))
-    fail("README lists the skill", `${name} — not mentioned in README.md`);
-ran("README coverage", skills.size);
+// Both READMEs, when a translation exists — otherwise the translated one goes
+// stale silently, which is worse than not having it: a reader trusts it.
+const readmes = ["README.md", "README.th.md"].filter((f) => existsSync(f));
+for (const file of readmes) {
+  const text = readFileSync(file, "utf8");
+  for (const name of skills.keys())
+    if (!text.includes(`\`${name}\``))
+      fail("README lists the skill", `${name} — not mentioned in ${file}`);
+}
+ran("README coverage", skills.size * readmes.length);
 
 // --------------------------------------------- 7. no counts written in prose
 //
@@ -165,7 +170,7 @@ ran("README coverage", skills.size);
 // A number in prose next to the thing that computes it goes stale silently.
 // Write the comparison, never the count.
 
-const PROSE = ["README.md", "CONTEXT.md", "CONTRIBUTING.md", ...[...skills.values()].map((s) => s.path)];
+const PROSE = ["README.md", "README.th.md", "CONTEXT.md", "CONTRIBUTING.md", "SECURITY.md", ...[...skills.values()].map((s) => s.path)];
 const COUNT_IN_PROSE = /\b(\d{2,})\s+skills\b|\bthe\s+(two|three|four|five|six|seven|eight|nine|ten)\s+(entry points|skills|commands)\b/gi;
 for (const file of PROSE) {
   if (!existsSync(file)) continue;
